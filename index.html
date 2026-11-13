@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>248Tech: projects &amp; live demos</title>
+<meta name="description" content="A directory of 248Tech's open-source projects with live demos: ShowTime, litemap, QwenPad and more.">
+<link rel="canonical" href="https://248tech.github.io/">
+<meta name="theme-color" content="#0b0d12">
+<meta property="og:type" content="website">
+<meta property="og:title" content="248Tech: projects &amp; live demos">
+<meta property="og:description" content="Open-source projects by 248Tech, each with a live site you can try in the browser.">
+<meta property="og:url" content="https://248tech.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"248Tech","url":"https://248tech.github.io/","description":"Directory of open-source projects and live demos by 248Tech."}
+</script>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">github.com/248Tech</p>
+    <h1>Things I build, <span>live in your browser.</span></h1>
+    <p class="lede">Backend &amp; systems projects: self-hosted tools, automation and desktop apps. Every card below links to a working site.</p>
+    <div class="bar">
+      <input id="q" type="search" placeholder="Search projects…" aria-label="Search projects" autocomplete="off">
+      <span id="count" class="count" aria-live="polite"></span>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <div id="grid" class="grid" aria-label="Projects"></div>
+  <p id="empty" class="empty" hidden>No projects match your search.</p>
+  <noscript><p class="empty">Enable JavaScript to see the project list, or browse <a href="https://github.com/248Tech?tab=repositories">github.com/248Tech</a>.</p></noscript>
+</main>
+<footer class="wrap foot">
+  <span>Updated <time id="gen"></time> · auto-refreshed daily</span>
+  <span><a href="https://github.com/248Tech">GitHub</a> · <a href="https://248tech.com">248tech.com</a></span>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
