@@ -45,4 +45,42 @@
   const t = document.getElementById('gen');
   t.textContent = new Date(data.generated).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
   t.dateTime = data.generated;
+
+  // ---- lines of code widget ----
+  const loc = data.loc;
+  if (loc && loc.total) {
+    const sec = document.getElementById('loc'); sec.hidden = false;
+    const fmt = n => n.toLocaleString('en-US');
+    const repos = Object.entries(loc.repos).sort((a, b) => b[1].total - a[1].total);
+    document.getElementById('loc-repos').textContent = repos.length;
+    const langs = Object.entries(loc.languages).sort((a, b) => b[1] - a[1]);
+    const top = langs.slice(0, 7), rest = langs.slice(7).reduce((s, [, n]) => s + n, 0);
+    if (rest) top.push(['Other', rest]);
+    const bar = document.getElementById('loc-bar'), legend = document.getElementById('loc-legend'), segs = [];
+    top.forEach(([name, n], i) => {
+      const color = name === 'Other' ? '#64748b' : 'hsl(' + ((i * 47 + 20) % 360) + ' 70% 55%)';
+      const seg = el('i'); seg.style.background = color; seg.style.flexBasis = '0%'; seg.title = name + ': ' + fmt(n); bar.append(seg); segs.push([seg, n]);
+      const li = el('li'); const sw = el('i'); sw.style.background = color;
+      li.append(sw, document.createTextNode(name + ' '), el('b', null, (n / loc.total * 100).toFixed(1) + '%')); legend.append(li);
+    });
+    const list = document.getElementById('loc-list'), max = repos[0][1].total;
+    for (const [name, r] of repos) {
+      const li = el('li'), tr = el('div', 'tr'), fill = el('i'); fill.style.width = (r.total / max * 100) + '%'; tr.append(fill);
+      li.append(el('span', 'nm', name), tr, el('span', 'ct', fmt(r.total))); list.append(li);
+    }
+    const numEl = document.getElementById('loc-total');
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const play = () => {
+      segs.forEach(([s, n]) => { s.style.flexBasis = (n / loc.total * 100) + '%'; });
+      if (reduce) { numEl.textContent = fmt(loc.total); return; }
+      const t0 = performance.now(), dur = 1600;
+      const tick = now => { const p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3); numEl.textContent = fmt(Math.round(loc.total * e)); if (p < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    };
+    numEl.textContent = fmt(loc.total);
+    if ('IntersectionObserver' in window && !reduce) {
+      numEl.textContent = '0';
+      new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { play(); o.disconnect(); } }, { threshold: .3 }).observe(sec);
+    } else play();
+  }
 })();

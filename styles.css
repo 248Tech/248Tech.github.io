@@ -32,3 +32,23 @@ h2{margin:0;font-size:20px;text-transform:capitalize}
 .empty{color:var(--dim);text-align:center;padding:40px 0}
 .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-top:20px;padding-bottom:40px;border-top:1px solid var(--line);color:var(--dim);font-size:14px}
 @media (prefers-reduced-motion:reduce){.card{transition:none}}
+
+.loc{padding-top:36px;padding-bottom:36px;border-top:1px solid var(--line)}
+.loc-title{margin:0;font-size:clamp(28px,5vw,44px);text-transform:none;letter-spacing:-.02em}
+.loc-num{color:var(--accent);font-variant-numeric:tabular-nums}
+.loc-sub{max-width:70ch;color:var(--dim);font-size:14.5px;margin:8px 0 20px}
+.loc-bar{display:flex;height:14px;border-radius:99px;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
+.loc-bar i{display:block;height:100%;transition:flex-basis .9s cubic-bezier(.2,.7,.2,1)}
+.loc-legend{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;color:var(--dim)}
+.loc-legend b{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
+.loc-legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.loc-detail{margin-top:18px;color:var(--dim);font-size:14px}
+.loc-detail summary{cursor:pointer;color:var(--text);font-weight:600}
+.loc-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.loc-list li{display:grid;grid-template-columns:minmax(120px,240px) 1fr 80px;gap:12px;align-items:center}
+.loc-list .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.loc-list .tr{height:8px;border-radius:6px;background:var(--panel);overflow:hidden}
+.loc-list .tr i{display:block;height:100%;background:var(--accent);border-radius:6px}
+.loc-list .ct{text-align:right;font-variant-numeric:tabular-nums;color:var(--text)}
+@media(max-width:560px){.loc-list li{grid-template-columns:1fr 70px}.loc-list .tr{grid-column:1/-1;order:3}}
+@media (prefers-reduced-motion:reduce){.loc-bar i{transition:none}}

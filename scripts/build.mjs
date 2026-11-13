@@ -2,6 +2,7 @@
 // GitHub Pages site (detected by probing https://OWNER.github.io/<repo>/ - no admin token needed).
 // Usage: node scripts/build.mjs   (set GITHUB_TOKEN to avoid API rate limits)
 import { writeFile } from 'node:fs/promises';
+import { countAll } from './loc.mjs';
 
 const OWNER = process.env.OWNER || '248Tech';
 const HOST = `https://${OWNER.toLowerCase()}.github.io`;
@@ -41,5 +42,7 @@ const checked = await Promise.all(repos.map(async r => {
   } : null;
 }));
 const projects = checked.filter(Boolean).sort((a, b) => b.stars - a.stars || b.pushed.localeCompare(a.pushed));
-await writeFile(new URL('../projects.json', import.meta.url), JSON.stringify({ owner: OWNER, generated: new Date().toISOString(), projects }, null, 2) + '\n');
+const loc = await countAll(repos);
+console.log(`${loc.total} lines of code across ${Object.keys(loc.repos).length} repos`);
+await writeFile(new URL('../projects.json', import.meta.url), JSON.stringify({ owner: OWNER, generated: new Date().toISOString(), loc, projects }, null, 2) + '\n');
 console.log(`${projects.length} sites:`, projects.map(p => p.name).join(', '));

@@ -1,7 +1,230 @@
 {
   "owner": "248Tech",
-  "generated": "2026-11-13T17:58:30.043Z",
+  "generated": "2026-11-13T21:10:28.240Z",
+  "loc": {
+    "total": 150428,
+    "languages": {
+      "Python": 7759,
+      "Shell": 2231,
+      "Go": 29746,
+      "PowerShell": 1922,
+      "HTML": 1860,
+      "TypeScript": 54564,
+      "CSS": 4123,
+      "JavaScript": 35764,
+      "Prisma": 1754,
+      "C#": 8520,
+      "SQL": 1397,
+      "PHP": 788
+    },
+    "repos": {
+      "Autoresponder": {
+        "total": 1406,
+        "languages": {
+          "Python": 1406
+        }
+      },
+      "7dtd-region-healer": {
+        "total": 168,
+        "languages": {
+          "Shell": 168
+        }
+      },
+      "AI-Typing-Assistant": {
+        "total": 865,
+        "languages": {
+          "Python": 865
+        }
+      },
+      "7dtd-mastermind-donors": {
+        "total": 439,
+        "languages": {
+          "Shell": 264,
+          "Python": 175
+        }
+      },
+      "camcord": {
+        "total": 63,
+        "languages": {
+          "Python": 63
+        }
+      },
+      "carrion": {
+        "total": 2096,
+        "languages": {
+          "Go": 2096
+        }
+      },
+      "carrion-spine": {
+        "total": 2595,
+        "languages": {
+          "Python": 2595
+        }
+      },
+      "fortnite-updates-bot": {
+        "total": 627,
+        "languages": {
+          "Python": 499,
+          "PowerShell": 70,
+          "Shell": 58
+        }
+      },
+      "GeoHawk": {
+        "total": 1242,
+        "languages": {
+          "HTML": 12,
+          "TypeScript": 1026,
+          "CSS": 204
+        }
+      },
+      "ImgConvert": {
+        "total": 509,
+        "languages": {
+          "Python": 509
+        }
+      },
+      "GarageIQ": {
+        "total": 16994,
+        "languages": {
+          "PowerShell": 13,
+          "JavaScript": 15870,
+          "CSS": 790,
+          "HTML": 270,
+          "Shell": 51
+        }
+      },
+      "fortnite-cosmetics-browser": {
+        "total": 3988,
+        "languages": {
+          "HTML": 188,
+          "JavaScript": 2720,
+          "CSS": 510,
+          "Shell": 5,
+          "Python": 565
+        }
+      },
+      "mastermind-cortex": {
+        "total": 2936,
+        "languages": {
+          "Go": 2404,
+          "HTML": 12,
+          "TypeScript": 457,
+          "CSS": 30,
+          "PowerShell": 33
+        }
+      },
+      "litemap": {
+        "total": 10565,
+        "languages": {
+          "HTML": 649,
+          "CSS": 447,
+          "JavaScript": 9469
+        }
+      },
+      "MeasureTent": {
+        "total": 350,
+        "languages": {
+          "HTML": 12,
+          "JavaScript": 6,
+          "TypeScript": 266,
+          "CSS": 7,
+          "Prisma": 59
+        }
+      },
+      "QwenPad": {
+        "total": 8935,
+        "languages": {
+          "HTML": 203,
+          "PowerShell": 212,
+          "C#": 8520
+        }
+      },
+      "Mastermind-7DTD-AI-Server-Manager": {
+        "total": 37569,
+        "languages": {
+          "Go": 9927,
+          "SQL": 635,
+          "Prisma": 644,
+          "TypeScript": 22140,
+          "JavaScript": 1290,
+          "Shell": 623,
+          "Python": 120,
+          "PHP": 788,
+          "PowerShell": 289,
+          "HTML": 220,
+          "CSS": 893
+        }
+      },
+      "Mastermind-Minecraft-Server-Manager": {
+        "total": 28355,
+        "languages": {
+          "Go": 6899,
+          "SQL": 678,
+          "Prisma": 609,
+          "TypeScript": 17392,
+          "JavaScript": 500,
+          "Shell": 545,
+          "PowerShell": 949,
+          "CSS": 783
+        }
+      },
+      "ShowTime": {
+        "total": 6456,
+        "languages": {
+          "JavaScript": 5792,
+          "HTML": 281,
+          "CSS": 383
+        }
+      },
+      "RTSPanda": {
+        "total": 15250,
+        "languages": {
+          "Python": 863,
+          "Go": 8420,
+          "SQL": 84,
+          "PowerShell": 211,
+          "JavaScript": 111,
+          "HTML": 13,
+          "TypeScript": 5010,
+          "CSS": 21,
+          "Shell": 517
+        }
+      },
+      "TentGrid": {
+        "total": 9020,
+        "languages": {
+          "Prisma": 442,
+          "TypeScript": 8273,
+          "JavaScript": 6,
+          "CSS": 55,
+          "PowerShell": 145,
+          "Python": 99
+        }
+      }
+    }
+  },
   "projects": [
+    {
+      "name": "Mastermind-7DTD-AI-Server-Manager",
+      "description": "AI-assisted, multi-server 7 Days to Die control plane and host agent: safe restarts/updates, live map, player portal, POI search, mods/config editing, saves, triggers, health, logs, and Discord.",
+      "site": "https://248tech.github.io/Mastermind-7DTD-AI-Server-Manager/",
+      "repo": "https://github.com/248Tech/Mastermind-7DTD-AI-Server-Manager",
+      "language": "TypeScript",
+      "topics": [
+        "7dtd",
+        "bullmq",
+        "docker",
+        "game-server",
+        "golang",
+        "nestjs",
+        "nextjs",
+        "prisma",
+        "server-management",
+        "websocket"
+      ],
+      "stars": 3,
+      "pushed": "2026-11-13T21:04:15Z"
+    },
     {
       "name": "QwenPad",
       "description": "Beautiful desktop sticky notes + a tiny private Notepad for Windows with a local AI (Qwen3.5 + llama.cpp). 15 note designs, rich text, images, drawing, pin on top, notes that stay open. 100% offline, portable.",
@@ -62,7 +285,36 @@
         "windows"
       ],
       "stars": 1,
-      "pushed": "2026-11-13T17:15:20Z"
+      "pushed": "2026-11-13T20:06:15Z"
+    },
+    {
+      "name": "GarageIQ",
+      "description": "AI-assisted restoration manager for vehicle builds: dependency-aware checklists, parts, expenses, garage projects, an interactive garage and an offline-first PWA. Node.js · SQLite · vanilla JS.",
+      "site": "https://248tech.github.io/GarageIQ/",
+      "repo": "https://github.com/248Tech/GarageIQ",
+      "language": "JavaScript",
+      "topics": [
+        "ai-assistant",
+        "automotive",
+        "car-restoration",
+        "checklist",
+        "expense-tracker",
+        "express",
+        "garage",
+        "inventory-management",
+        "javascript",
+        "nodejs",
+        "offline-first",
+        "openai",
+        "project-management",
+        "pwa",
+        "self-hosted",
+        "sqlite",
+        "vanilla-js",
+        "vehicle-restoration"
+      ],
+      "stars": 0,
+      "pushed": "2026-11-13T20:11:56Z"
     },
     {
       "name": "ShowTime",
