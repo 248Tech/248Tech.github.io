@@ -28,7 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
       - run: |
           mkdir _site
-          cp index.html app.js styles.css favicon.svg projects.json _site/
+          cp index.html app.js fx.js styles.css favicon.svg projects.json _site/
           cp -r assets _site/assets
           printf 'User-agent: *\nAllow: /\nSitemap: https://248tech.github.io/sitemap.xml\n' > _site/robots.txt
           printf '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://248tech.github.io/</loc></url></urlset>\n' > _site/sitemap.xml

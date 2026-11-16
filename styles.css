@@ -82,7 +82,8 @@ input[type=search]:focus{outline:2px solid var(--accent);outline-offset:2px}
 /* cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;padding-bottom:16px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s}
-.card:hover{transform:translateY(-4px);border-color:hsl(var(--h) 70% 55%);box-shadow:0 20px 40px -24px hsl(var(--h) 70% 45%/.6)}
+.card{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--ty,0px));transition:transform .15s ease-out,border-color .2s,box-shadow .2s}
+.card:hover{--ty:-4px;border-color:hsl(var(--h) 70% 55%);box-shadow:0 20px 40px -24px hsl(var(--h) 70% 45%/.6)}
 .card[hidden]{display:none}
 .art{position:relative;height:120px;display:grid;place-items:center;font:800 46px/1 system-ui;letter-spacing:.04em;color:#fff;overflow:hidden;background:linear-gradient(135deg,hsl(var(--h) 70% 42%),hsl(calc(var(--h) + 50) 70% 28%))}
 .art::before{content:"";position:absolute;inset:0;background-image:radial-gradient(#fff3 1px,transparent 1px);background-size:16px 16px;opacity:.5}
@@ -149,3 +150,25 @@ h2.title,.card h3{margin:0;font-size:20px;letter-spacing:-.01em;text-transform:c
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 .eyebrow{margin:0 0 8px;color:var(--accent);font:600 13px/1 ui-monospace,Consolas,monospace;letter-spacing:.06em;text-transform:uppercase}
+
+/* ---- wow layer (driven by fx.js) ---- */
+.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-in{z-index:1}
+.grad.swap{display:inline-block;transition:opacity .35s,transform .35s,filter .35s}
+.grad.swap.out{opacity:0;transform:translateY(.25em);filter:blur(6px)}
+.win{animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:rotate(1.5deg) translateY(-10px)}}
+.ln{opacity:0;animation:ln .45s forwards;animation-delay:calc(var(--i) * .6s + .5s)}
+@keyframes ln{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+.reveal{opacity:0;translate:0 28px;transition:opacity .8s ease var(--d,0s),translate .8s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.reveal.in{opacity:1;translate:0 0}
+.card.reveal,.feature.reveal{transition:opacity .8s ease var(--d,0s),translate .8s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .15s ease-out,border-color .2s,box-shadow .2s}
+.card::after,.feature::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .25s;border-radius:inherit;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),hsl(var(--h) 90% 60%/.18),transparent 60%)}
+.card,.feature{position:relative}
+.card:hover::after,.feature:hover::after{opacity:1}
+.btn.primary{position:relative;overflow:hidden}
+.btn.primary::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,#fff7 50%,transparent 70%);transform:translateX(-120%)}
+.btn.primary:hover::after{transform:translateX(120%);transition:transform .7s}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;translate:none}.ln{opacity:1}.win{animation:none}}
+@media (prefers-color-scheme:light){.hero-bg{opacity:.14}}
