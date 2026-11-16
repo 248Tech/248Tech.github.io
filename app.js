@@ -23,6 +23,11 @@
     const card = el('article', tag === 'feature' ? 'feature' : 'card');
     card.style.setProperty('--h', hue(p.name));
     const art = el('div', 'art'); art.append(el('span', null, p.name.slice(0, 2).toUpperCase()));
+    const img = el('img'); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async';
+    img.src = 'assets/banners/' + p.name + '.webp';
+    img.addEventListener('load', () => art.classList.add('has-img'));
+    img.addEventListener('error', () => img.remove());
+    art.prepend(img);
     art.setAttribute('aria-hidden', 'true');
     const body = el('div', 'body');
     if (tag === 'feature') body.append(el('span', 'tag', 'Featured project'));
