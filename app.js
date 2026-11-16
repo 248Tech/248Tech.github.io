@@ -45,13 +45,15 @@
     return card;
   };
 
-  // featured: first project (build.mjs sorts by stars, then recency)
+  // featured: pinned by name (falls back to the first project)
+  const FEATURED = 'Mastermind-7DTD-AI-Server-Manager';
+  const feat = projects.find(p => p.name === FEATURED) || projects[0];
   if (projects.length) {
-    $('feature').append(build(projects[0], 'feature'));
+    $('feature').append(build(feat, 'feature'));
     $('featured').hidden = false;
   }
 
-  const rest = projects.slice(projects.length > 1 ? 1 : 0);
+  const rest = projects.length > 1 ? projects.filter(p => p !== feat) : projects;
   const cards = rest.map(p => {
     const c = build(p);
     c.dataset.lang = p.language || '';
