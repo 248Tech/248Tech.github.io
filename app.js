@@ -9,7 +9,10 @@
 
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
   const hue = s => [...s].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 360, 7);
-  const pretty = n => n.replace(/[-_]+/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2');
+  // Brand-correct names (the generic splitter would turn LyricVision into "Lyric Vision").
+  const BRAND = { DarkNotepad: 'Dark Notepad', LyricVision: 'LyricVision', litemap: 'LiteMap', GarageIQ: 'GarageIQ',
+    ShowTime: 'ShowTime', RTSPanda: 'RTSPanda', rentalos: 'RentalOS', ImgConvert: 'ImgConvert', QwenPad: 'QwenPad' };
+  const pretty = n => BRAND[n] || n.replace(/[-_]+/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2');
   const projects = data.projects;
 
   // stats, derived from real data
@@ -24,6 +27,7 @@
     card.style.setProperty('--h', hue(p.name));
     const art = el('div', 'art'); art.append(el('span', null, p.name.slice(0, 2).toUpperCase()));
     const img = el('img'); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async';
+    img.width = 1216; img.height = 512;
     img.src = 'assets/banners/' + p.name + '.webp';
     img.addEventListener('load', () => art.classList.add('has-img'));
     img.addEventListener('error', () => img.remove());

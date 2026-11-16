@@ -75,7 +75,7 @@ input[type=search]:focus{outline:2px solid var(--accent);outline-offset:2px}
 .feature:hover{border-color:hsl(var(--h) 70% 55%)}
 .feature .art{min-height:300px;height:auto;font-size:84px}
 .feature .body{padding:36px;justify-content:center;gap:14px}
-.feature h3{margin:0;font-size:30px;letter-spacing:-.02em;text-transform:capitalize}
+.feature h3{margin:0;font-size:30px;line-height:1.15;letter-spacing:-.02em;text-transform:capitalize}
 .feature .desc{-webkit-line-clamp:6;font-size:16px}
 .tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 
@@ -93,10 +93,10 @@ input[type=search]:focus{outline:2px solid var(--accent);outline-offset:2px}
 .art.has-img::before{background-image:none;background:linear-gradient(180deg,transparent 40%,color-mix(in srgb,var(--panel) 85%,transparent))}
 .art.has-img span{opacity:0}
 .card:hover .art img,.feature:hover .art img{transform:scale(1.06)}
-.card .art{height:150px}
+.card .art{height:176px}
 .hero-bg{position:absolute;inset:0;background:url(assets/banners/hero.webp) center/cover;opacity:.28;mask-image:linear-gradient(90deg,transparent 10%,#000 90%),linear-gradient(#000 50%,transparent);-webkit-mask-image:linear-gradient(270deg,#000 15%,transparent 85%)}
 .body{padding:20px;display:flex;flex-direction:column;gap:11px;flex:1}
-h2.title,.card h3{margin:0;font-size:20px;letter-spacing:-.01em;text-transform:capitalize}
+h2.title,.card h3{margin:0;font-size:20px;line-height:1.25;letter-spacing:-.01em;text-transform:capitalize}
 .desc{margin:0;color:var(--dim);font-size:14.5px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .meta{display:flex;flex-wrap:wrap;gap:6px}
 .chip{font-size:12px;padding:3px 10px;border-radius:99px;background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent)}
@@ -172,3 +172,18 @@ h2.title,.card h3{margin:0;font-size:20px;letter-spacing:-.01em;text-transform:c
 .btn.primary:hover::after{transform:translateX(120%);transition:transform .7s}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;translate:none}.ln{opacity:1}.win{animation:none}}
 @media (prefers-color-scheme:light){.hero-bg{opacity:.14}}
+
+
+/* ---- polish pass ---- */
+:root{color-scheme:dark}
+h1,.sh,.feature h3,.card h3{text-wrap:balance}
+.desc{text-wrap:pretty}
+.art img{object-position:center}
+/* featured: give the screenshot a wider column so cover-cropping never clips it */
+.feature .art{min-height:320px}
+@media (min-width:861px){.feature{grid-template-columns:1.3fr 1fr}}
+/* tidy hero stats on phones: an even 2x2 grid instead of an orphaned fourth item */
+@media (max-width:520px){
+  .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 20px}
+  .feature .art{min-height:200px}
+}
