@@ -3,37 +3,106 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>248Tech: projects &amp; live demos</title>
-<meta name="description" content="A directory of 248Tech's projects with live demos and showcases: GarageIQ, ShowTime, litemap, QwenPad and more.">
+<title>248Tech | Software, self-hosted tools &amp; live demos</title>
+<meta name="description" content="248Tech builds self-hosted software, local-AI desktop apps and geospatial tools. Open source, with a live demo or showcase for every project.">
 <link rel="canonical" href="https://248tech.github.io/">
-<meta name="theme-color" content="#0b0d12">
+<meta name="theme-color" content="#0a0c10">
 <meta property="og:type" content="website">
-<meta property="og:title" content="248Tech: projects &amp; live demos">
-<meta property="og:description" content="Projects by 248Tech, each with a live site or showcase you can open in the browser.">
+<meta property="og:title" content="248Tech | Software, self-hosted tools &amp; live demos">
+<meta property="og:description" content="Open-source software by 248Tech: self-hosted servers, offline AI apps and geospatial tools, each with a live demo or showcase.">
 <meta property="og:url" content="https://248tech.github.io/">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"248Tech","url":"https://248tech.github.io/","description":"Directory of projects, live demos and showcases by 248Tech."}
+{"@context":"https://schema.org","@type":"Organization","name":"248Tech","url":"https://248tech.github.io/","sameAs":["https://github.com/248Tech","https://248tech.com"],"description":"Open-source software: self-hosted servers, offline AI apps and geospatial tools."}
 </script>
 </head>
 <body>
-<header class="hero">
-  <div class="wrap">
-    <p class="eyebrow">github.com/248Tech</p>
-    <h1>Things I build, <span>live in your browser.</span></h1>
-    <p class="lede">Backend &amp; systems projects: self-hosted tools, automation and desktop apps. Every card below links to a working site.</p>
-    <div class="bar">
-      <input id="q" type="search" placeholder="Search projects…" aria-label="Search projects" autocomplete="off">
-      <span id="count" class="count" aria-live="polite"></span>
+<a class="skip" href="#projects">Skip to projects</a>
+
+<nav class="nav" aria-label="Primary">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="248Tech home"><span class="logo" aria-hidden="true">248</span><span>Tech</span></a>
+    <div class="links">
+      <a href="#projects">Projects</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+      <a class="btn small" href="https://github.com/248Tech" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="pill"><span class="dot" aria-hidden="true"></span> Open source · Live demos</p>
+      <h1>Software that runs <span class="grad">where you do.</span></h1>
+      <p class="lede">Self-hosted servers, offline AI apps and geospatial tools. Built to be private, fast to try and simple to own. Every project ships with a working demo.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">Explore projects</a>
+        <a class="btn" href="https://github.com/248Tech" rel="noopener">View on GitHub</a>
+      </div>
+      <dl class="stats" id="stats" aria-label="At a glance"></dl>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="win">
+        <div class="win-bar"><i></i><i></i><i></i><span>~/248tech</span></div>
+        <pre class="win-body"><span class="c">$</span> <span class="k">node</span> server.js
+<span class="ok">✓</span> self-hosted, no cloud
+<span class="ok">✓</span> end-to-end encrypted
+<span class="ok">✓</span> zero tracking
+<span class="c">$</span> <span class="k">open</span> live-demo <span class="cur"></span></pre>
+      </div>
     </div>
   </div>
 </header>
-<main class="wrap">
-  <div id="grid" class="grid" aria-label="Projects"></div>
-  <p id="empty" class="empty" hidden>No projects match your search.</p>
-  <noscript><p class="empty">Enable JavaScript to see the project list, or browse <a href="https://github.com/248Tech?tab=repositories">github.com/248Tech</a>.</p></noscript>
+
+<main>
+  <section class="wrap section" id="featured" aria-labelledby="feat-h" hidden>
+    <h2 class="sh" id="feat-h">Featured</h2>
+    <div id="feature"></div>
+  </section>
+
+  <section class="wrap section" id="projects" aria-labelledby="proj-h">
+    <div class="sec-head">
+      <div>
+        <h2 class="sh" id="proj-h">All projects</h2>
+        <p class="sub">Each card links to a working site and its source.</p>
+      </div>
+      <div class="bar">
+        <input id="q" type="search" placeholder="Search projects…" aria-label="Search projects" autocomplete="off">
+        <span id="count" class="count" aria-live="polite"></span>
+      </div>
+    </div>
+    <div id="filters" class="filters" role="group" aria-label="Filter by language"></div>
+    <div id="grid" class="grid" aria-label="Projects"></div>
+    <p id="empty" class="empty" hidden>No projects match your search.</p>
+    <noscript><p class="empty">Enable JavaScript to see the project list, or browse <a href="https://github.com/248Tech?tab=repositories">github.com/248Tech</a>.</p></noscript>
+  </section>
+
+  <section class="wrap section" id="approach" aria-labelledby="app-h">
+    <h2 class="sh" id="app-h">How we build</h2>
+    <div class="pillars">
+      <article class="pillar"><span class="ico" aria-hidden="true">⌂</span><h3>Self-hosted first</h3><p>Your data stays on your hardware. Servers and tools run locally with minimal setup and few moving parts.</p></article>
+      <article class="pillar"><span class="ico" aria-hidden="true">◐</span><h3>Private by default</h3><p>Offline AI, encrypted chat and no required accounts. Privacy is a design constraint, not a setting.</p></article>
+      <article class="pillar"><span class="ico" aria-hidden="true">◇</span><h3>Lean and dependency-light</h3><p>Small codebases, open APIs and zero-dependency builds where possible. Easy to audit, easy to run.</p></article>
+      <article class="pillar"><span class="ico" aria-hidden="true">▶</span><h3>Try before you install</h3><p>A live, in-browser demo for every project, so you can judge it in seconds.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap section" id="contact" aria-labelledby="c-h">
+    <div class="contact">
+      <div>
+        <h2 class="sh" id="c-h">Let's build something.</h2>
+        <p class="sub">Questions, feedback or a project in mind? Open an issue on a repo or visit the main site.</p>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="https://248tech.com" rel="noopener">248tech.com</a>
+        <a class="btn" href="https://github.com/248Tech" rel="noopener">github.com/248Tech</a>
+      </div>
+    </div>
+  </section>
 </main>
 <section class="wrap loc" id="loc" aria-labelledby="loc-h" hidden>
   <p class="eyebrow">code written</p>
@@ -44,8 +113,8 @@
   <details class="loc-detail"><summary>Breakdown by repository</summary><ol id="loc-list" class="loc-list"></ol></details>
 </section>
 <footer class="wrap foot">
-  <span>Updated <time id="gen"></time> · auto-refreshed daily</span>
-  <span><a href="https://github.com/248Tech">GitHub</a> · <a href="https://248tech.com">248tech.com</a></span>
+  <span>© <span id="yr"></span> 248Tech · Updated <time id="gen"></time> · auto-refreshed daily</span>
+  <span><a href="https://github.com/248Tech" rel="noopener">GitHub</a> · <a href="https://248tech.com" rel="noopener">248tech.com</a></span>
 </footer>
 <script src="app.js"></script>
 </body>
