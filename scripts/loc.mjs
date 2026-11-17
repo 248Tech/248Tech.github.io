@@ -1,4 +1,4 @@
-// Counts non-blank lines of hand-written source code across public, non-fork repos.
+// Counts non-blank lines of hand-written source code across the repos it is given (build.mjs passes open-source ones).
 // Shallow-clones each repo (public, unauthenticated) into a temp dir and only reads files - nothing is executed.
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';

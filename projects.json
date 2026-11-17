@@ -1,16 +1,16 @@
 {
   "owner": "248Tech",
-  "generated": "2026-11-17T00:34:20.796Z",
+  "generated": "2026-11-17T00:40:36.911Z",
   "loc": {
-    "total": 157047,
+    "total": 138701,
     "languages": {
-      "Python": 7759,
-      "Shell": 2231,
-      "PowerShell": 2685,
-      "HTML": 3361,
+      "Python": 6894,
+      "Shell": 2180,
       "Go": 29746,
-      "JavaScript": 37901,
-      "CSS": 4532,
+      "PowerShell": 2672,
+      "HTML": 2905,
+      "JavaScript": 21818,
+      "CSS": 3654,
       "TypeScript": 54564,
       "C#": 10329,
       "Prisma": 1754,
@@ -30,23 +30,17 @@
           "Shell": 168
         }
       },
+      "camcord": {
+        "total": 63,
+        "languages": {
+          "Python": 63
+        }
+      },
       "7dtd-mastermind-donors": {
         "total": 439,
         "languages": {
           "Shell": 264,
           "Python": 175
-        }
-      },
-      "AI-Typing-Assistant": {
-        "total": 865,
-        "languages": {
-          "Python": 865
-        }
-      },
-      "camcord": {
-        "total": 63,
-        "languages": {
-          "Python": 63
         }
       },
       "carrion-spine": {
@@ -55,36 +49,17 @@
           "Python": 2595
         }
       },
-      "DarkNotepad": {
-        "total": 1036,
-        "languages": {
-          "PowerShell": 763,
-          "HTML": 273
-        }
-      },
       "carrion": {
         "total": 2096,
         "languages": {
           "Go": 2096
         }
       },
-      "fortnite-updates-bot": {
-        "total": 1011,
+      "DarkNotepad": {
+        "total": 1036,
         "languages": {
-          "Python": 499,
-          "PowerShell": 70,
-          "Shell": 58,
-          "HTML": 165,
-          "JavaScript": 168,
-          "CSS": 51
-        }
-      },
-      "GeoHawk": {
-        "total": 1242,
-        "languages": {
-          "HTML": 12,
-          "TypeScript": 1026,
-          "CSS": 204
+          "PowerShell": 763,
+          "HTML": 273
         }
       },
       "fortnite-cosmetics-browser": {
@@ -97,16 +72,6 @@
           "Python": 565
         }
       },
-      "GarageIQ": {
-        "total": 16994,
-        "languages": {
-          "PowerShell": 13,
-          "JavaScript": 15870,
-          "CSS": 790,
-          "HTML": 270,
-          "Shell": 51
-        }
-      },
       "ImgConvert": {
         "total": 863,
         "languages": {
@@ -114,6 +79,21 @@
           "HTML": 205,
           "JavaScript": 112,
           "CSS": 37
+        }
+      },
+      "GeoHawk": {
+        "total": 1242,
+        "languages": {
+          "HTML": 12,
+          "TypeScript": 1026,
+          "CSS": 204
+        }
+      },
+      "LyricVision": {
+        "total": 2076,
+        "languages": {
+          "HTML": 267,
+          "C#": 1809
         }
       },
       "litemap": {
@@ -124,11 +104,15 @@
           "JavaScript": 9469
         }
       },
-      "LyricVision": {
-        "total": 2076,
+      "fortnite-updates-bot": {
+        "total": 1011,
         "languages": {
-          "HTML": 267,
-          "C#": 1809
+          "Python": 499,
+          "PowerShell": 70,
+          "Shell": 58,
+          "HTML": 165,
+          "JavaScript": 168,
+          "CSS": 51
         }
       },
       "mastermind-cortex": {
@@ -151,14 +135,6 @@
           "Prisma": 59
         }
       },
-      "QwenPad": {
-        "total": 8935,
-        "languages": {
-          "HTML": 203,
-          "PowerShell": 212,
-          "C#": 8520
-        }
-      },
       "Mastermind-7DTD-AI-Server-Manager": {
         "total": 37569,
         "languages": {
@@ -175,12 +151,12 @@
           "CSS": 893
         }
       },
-      "rentalos-site": {
-        "total": 487,
+      "QwenPad": {
+        "total": 8935,
         "languages": {
-          "HTML": 186,
-          "JavaScript": 213,
-          "CSS": 88
+          "HTML": 203,
+          "PowerShell": 212,
+          "C#": 8520
         }
       },
       "Mastermind-Minecraft-Server-Manager": {
@@ -195,6 +171,20 @@
           "PowerShell": 949,
           "HTML": 222,
           "CSS": 891
+        }
+      },
+      "RTSPanda": {
+        "total": 15720,
+        "languages": {
+          "Python": 863,
+          "Go": 8420,
+          "SQL": 84,
+          "PowerShell": 211,
+          "JavaScript": 349,
+          "HTML": 186,
+          "TypeScript": 5010,
+          "CSS": 80,
+          "Shell": 517
         }
       },
       "ShowTime": {
@@ -215,20 +205,6 @@
           "PowerShell": 145,
           "Python": 99
         }
-      },
-      "RTSPanda": {
-        "total": 15720,
-        "languages": {
-          "Python": 863,
-          "Go": 8420,
-          "SQL": 84,
-          "PowerShell": 211,
-          "JavaScript": 349,
-          "HTML": 186,
-          "TypeScript": 5010,
-          "CSS": 80,
-          "Shell": 517
-        }
       }
     }
   },
@@ -239,6 +215,8 @@
       "site": "https://248tech.github.io/fortnite-updates-bot/",
       "demo": "https://248tech.github.io/fortnite-updates-bot/",
       "repo": "https://github.com/248Tech/fortnite-updates-bot",
+      "open": true,
+      "license": "MIT",
       "language": "Python",
       "topics": [
         "aiohttp",
@@ -258,6 +236,8 @@
       "site": "https://248tech.github.io/Mastermind-7DTD-AI-Server-Manager/",
       "demo": "https://248tech.github.io/Mastermind-7DTD-AI-Server-Manager/",
       "repo": "https://github.com/248Tech/Mastermind-7DTD-AI-Server-Manager",
+      "open": true,
+      "license": "MIT",
       "language": "TypeScript",
       "topics": [
         "7dtd",
@@ -280,6 +260,8 @@
       "site": "https://248tech.github.io/QwenPad/",
       "demo": "https://248tech.github.io/QwenPad/",
       "repo": "https://github.com/248Tech/QwenPad",
+      "open": true,
+      "license": "MIT",
       "language": "C#",
       "topics": [
         "ai",
@@ -312,6 +294,8 @@
       "site": "https://248tech.github.io/ImgConvert/",
       "demo": "https://248tech.github.io/ImgConvert/",
       "repo": "https://github.com/248Tech/ImgConvert",
+      "open": true,
+      "license": "MIT",
       "language": "Python",
       "topics": [
         "batch-converter",
@@ -342,6 +326,8 @@
       "site": "https://248tech.github.io/Mastermind-Minecraft-Server-Manager/",
       "demo": "https://248tech.github.io/Mastermind-Minecraft-Server-Manager/",
       "repo": "https://github.com/248Tech/Mastermind-Minecraft-Server-Manager",
+      "open": true,
+      "license": "MIT",
       "language": "TypeScript",
       "topics": [],
       "stars": 1,
@@ -353,6 +339,8 @@
       "site": "https://248tech.github.io/RTSPanda/",
       "demo": "https://248tech.github.io/RTSPanda/",
       "repo": "https://github.com/248Tech/RTSPanda",
+      "open": true,
+      "license": "MIT",
       "language": "Go",
       "topics": [
         "cctv",
@@ -385,6 +373,8 @@
       "site": "https://248tech.github.io/fortnite-cosmetics-browser/",
       "demo": "https://248tech.github.io/fortnite-cosmetics-browser/",
       "repo": "https://github.com/248Tech/fortnite-cosmetics-browser",
+      "open": true,
+      "license": "MIT",
       "language": "Python",
       "topics": [
         "desktop-app",
@@ -420,6 +410,8 @@
       "site": "https://248tech.github.io/rentalos-site/",
       "demo": "https://248tech.github.io/rentalos-site/demo/",
       "repo": null,
+      "open": false,
+      "license": "NOASSERTION",
       "language": "JavaScript",
       "topics": [
         "event-rental",
@@ -435,6 +427,8 @@
       "site": "https://248tech.github.io/DarkNotepad/",
       "demo": "https://248tech.github.io/DarkNotepad/",
       "repo": "https://github.com/248Tech/DarkNotepad",
+      "open": true,
+      "license": "MIT",
       "language": "PowerShell",
       "topics": [
         "dark-mode",
@@ -459,6 +453,8 @@
       "site": "https://248tech.github.io/LyricVision/",
       "demo": "https://248tech.github.io/LyricVision/",
       "repo": "https://github.com/248Tech/LyricVision",
+      "open": true,
+      "license": "MIT",
       "language": "C#",
       "topics": [
         "beat-detection",
@@ -488,6 +484,8 @@
       "site": "https://248tech.github.io/ShowTime/",
       "demo": "https://248tech.github.io/ShowTime/",
       "repo": "https://github.com/248Tech/ShowTime",
+      "open": true,
+      "license": "MIT",
       "language": "JavaScript",
       "topics": [
         "av1",
@@ -513,6 +511,8 @@
       "site": "https://248tech.github.io/GarageIQ/",
       "demo": "https://248tech.github.io/GarageIQ/",
       "repo": "https://github.com/248Tech/GarageIQ",
+      "open": false,
+      "license": "NOASSERTION",
       "language": "JavaScript",
       "topics": [
         "ai-assistant",
@@ -543,6 +543,8 @@
       "site": "https://248tech.github.io/litemap/",
       "demo": "https://248tech.github.io/litemap/",
       "repo": "https://github.com/248Tech/litemap",
+      "open": true,
+      "license": "MIT",
       "language": "JavaScript",
       "topics": [
         "aerial-imagery",

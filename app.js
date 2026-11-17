@@ -19,7 +19,7 @@
   // stats, derived from real data
   const langs = [...new Set(projects.map(p => p.language).filter(Boolean))];
   const stars = projects.reduce((a, p) => a + (p.stars || 0), 0);
-  const open = projects.filter(p => p.repo).length;
+  const open = projects.filter(p => p.open).length;
   const stats = [[projects.length, 'Live projects'], [langs.length, 'Languages'],
     [open === projects.length ? '100%' : open + '/' + projects.length, 'Open source']];
   if (stars > 0) stats.push([stars, 'GitHub stars']);

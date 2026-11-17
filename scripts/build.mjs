@@ -40,6 +40,10 @@ const COMMERCIAL = {
   },
 };
 
+// Open source = GitHub detected a real SPDX license (e.g. MIT). Repos with no license file or a
+// custom/proprietary one (spdx_id NOASSERTION) are public but not open source.
+const isOpenSource = r => !!r.license?.spdx_id && !['NOASSERTION', 'NONE'].includes(r.license.spdx_id);
+
 const repos = (await listRepos()).filter(r => !r.fork && !r.archived && !r.private && r.name.toLowerCase() !== `${OWNER.toLowerCase()}.github.io`);
 const checked = await Promise.all(repos.map(async r => {
   const site = `${HOST}/${r.name}/`;
@@ -51,6 +55,8 @@ const checked = await Promise.all(repos.map(async r => {
     site,
     demo: c?.demo ? site + c.demo : site,
     repo: c ? null : r.html_url,
+    open: !c && isOpenSource(r),
+    license: r.license?.spdx_id || null,
     language: c?.language || r.language || '',
     topics: c?.topics || r.topics || [],
     stars: r.stargazers_count,
@@ -58,7 +64,7 @@ const checked = await Promise.all(repos.map(async r => {
   } : null;
 }));
 const projects = checked.filter(Boolean).sort((a, b) => b.stars - a.stars || b.pushed.localeCompare(a.pushed));
-const loc = await countAll(repos);
-console.log(`${loc.total} lines of code across ${Object.keys(loc.repos).length} repos`);
+const loc = await countAll(repos.filter(isOpenSource));
+console.log(`${loc.total} lines of open-source code across ${Object.keys(loc.repos).length} repos`);
 await writeFile(new URL('../projects.json', import.meta.url), JSON.stringify({ owner: OWNER, generated: new Date().toISOString(), loc, projects }, null, 2) + '\n');
 console.log(`${projects.length} sites:`, projects.map(p => p.name).join(', '));
