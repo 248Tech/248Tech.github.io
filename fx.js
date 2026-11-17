@@ -86,7 +86,7 @@
   // ---- headline: rotating phrase ----
   const g = $('h1 .grad');
   if (g && !reduce) {
-    const words = ['where you do.', 'on your terms.', 'privately.', 'offline.', 'in your browser.'];
+    const words = ['where you do.', 'on your hardware.', 'on your terms.'];
     let i = 0;
     g.classList.add('swap');
     setInterval(() => {
@@ -112,7 +112,7 @@
       }
     }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
     const watch = el => { if (el.nodeType === 1 && !el.classList.contains('reveal')) { el.classList.add('reveal'); io.observe(el); } };
-    document.querySelectorAll('.sec-head,.pillar,.contact,.loc,.foot').forEach(watch);
+    document.querySelectorAll('.sec-head,.pillar,.hire,.loc,.foot').forEach(watch);
     // cards are created by app.js after it fetches projects.json
     for (const id of ['grid', 'feature']) {
       const host = document.getElementById(id); if (!host) continue;

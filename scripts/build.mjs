@@ -36,7 +36,7 @@ const COMMERCIAL = {
     demo: 'demo/',
     language: 'JavaScript',
     topics: ['event-rental', 'self-hosted', 'inventory-management'],
-    description: 'Self-hosted event rental software: inventory, quotes, availability conflict detection, pull sheets, e-signatures and a public SEO catalog. Commercial product; try the in-browser demo.',
+    description: 'Self-hosted event rental management: inventory availability that separates confirmed bookings from pending quotes, quoting with a click-to-sign audit trail, pull sheets, a public SEO catalog and an optional AI assistant. Commercial; source private. Browser demo uses sample data.',
   },
 };
 
@@ -62,7 +62,9 @@ async function latestDownload(r, open) {
   return null;
 }
 
-const repos = (await listRepos()).filter(r => !r.fork && !r.archived && !r.private && r.name.toLowerCase() !== `${OWNER.toLowerCase()}.github.io`);
+// Pages sites that are part of this portfolio, not projects (e.g. the contact form).
+const EXCLUDE = new Set(['project-inquiry']);
+const repos = (await listRepos()).filter(r => !r.fork && !r.archived && !r.private && !EXCLUDE.has(r.name) && r.name.toLowerCase() !== `${OWNER.toLowerCase()}.github.io`);
 const checked = await Promise.all(repos.map(async r => {
   const site = `${HOST}/${r.name}/`;
   const c = COMMERCIAL[r.name];

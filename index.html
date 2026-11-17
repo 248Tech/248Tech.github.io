@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>248Tech | Software, self-hosted tools &amp; live demos</title>
-<meta name="description" content="248Tech builds self-hosted software, local-AI desktop apps and geospatial tools. Open-source and commercial, with a live demo or showcase for every project.">
+<title>248Tech | Self-hosted software for servers and small businesses</title>
+<meta name="description" content="248Tech builds self-hosted software for running game servers, monitoring cameras and managing event rentals, plus small Windows utilities. Most projects have an in-browser demo.">
 <link rel="canonical" href="https://248tech.github.io/">
 <meta name="theme-color" content="#0a0c10">
 <meta property="og:type" content="website">
-<meta property="og:title" content="248Tech | Software, self-hosted tools &amp; live demos">
-<meta property="og:description" content="Open-source and commercial software by 248Tech: self-hosted servers, offline AI apps and geospatial tools, each with a live demo or showcase.">
+<meta property="og:title" content="248Tech | Self-hosted software for servers and small businesses">
+<meta property="og:description" content="Self-hosted software by 248Tech: game-server management, camera monitoring and event rental tools. Open source and commercial.">
 <meta property="og:url" content="https://248tech.github.io/">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"248Tech","url":"https://248tech.github.io/","sameAs":["https://github.com/248Tech","https://248tech.com"],"description":"Open-source and commercial software: self-hosted servers, offline AI apps and geospatial tools."}
+{"@context":"https://schema.org","@type":"Organization","name":"248Tech","url":"https://248tech.github.io/","sameAs":["https://github.com/248Tech"],"description":"Self-hosted software for game-server operations, camera monitoring and event rental businesses."}
 </script>
 </head>
 <body>
@@ -28,7 +28,8 @@
       <a href="#projects">Projects</a>
       <a href="#approach">Approach</a>
       <a href="#contact">Contact</a>
-      <a class="btn small" href="https://github.com/248Tech" rel="noopener">GitHub</a>
+      <a class="btn small nav-gh" href="https://github.com/248Tech" rel="noopener">GitHub</a>
+      <a class="btn small primary nav-cta" href="https://248tech.github.io/project-inquiry/"><span class="spark" aria-hidden="true">✦</span>Start a project</a>
     </div>
   </div>
 </nav>
@@ -37,9 +38,9 @@
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <p class="pill"><span class="dot" aria-hidden="true"></span> Open source &amp; commercial · Live demos</p>
+      <p class="pill"><span class="dot" aria-hidden="true"></span> Open source &amp; commercial · Browser demos</p>
       <h1>Software that runs <span class="grad">where you do.</span></h1>
-      <p class="lede">Self-hosted servers, offline AI apps and geospatial tools. Built to be private, fast to try and simple to own. Every project ships with a working demo.</p>
+      <p class="lede">Self-hosted software for running game servers, monitoring cameras and managing event rentals, plus small Windows utilities. Most projects include an in-browser demo with sample data, so you can look around before installing anything.</p>
       <div class="cta">
         <a class="btn primary" href="#projects">Explore projects</a>
         <a class="btn" href="https://github.com/248Tech" rel="noopener">View on GitHub</a>
@@ -50,9 +51,9 @@
       <div class="win">
         <div class="win-bar"><i></i><i></i><i></i><span>~/248tech</span></div>
         <pre class="win-body"><span class="c">$</span> <span class="k">node</span> server.js
-<span class="ok">✓</span> self-hosted, no cloud
-<span class="ok">✓</span> end-to-end encrypted
-<span class="ok">✓</span> zero tracking
+<span class="ok">✓</span> runs on your hardware
+<span class="ok">✓</span> your data, your server
+<span class="ok">✓</span> cloud calls disclosed
 <span class="c">$</span> <span class="k">open</span> live-demo <span class="cur"></span></pre>
       </div>
     </div>
@@ -61,15 +62,15 @@
 
 <main>
   <section class="wrap section" id="featured" aria-labelledby="feat-h" hidden>
-    <h2 class="sh" id="feat-h">Featured</h2>
+    <h2 class="sh" id="feat-h">Flagship projects</h2>
     <div id="feature"></div>
   </section>
 
   <section class="wrap section" id="projects" aria-labelledby="proj-h">
     <div class="sec-head">
       <div>
-        <h2 class="sh" id="proj-h">All projects</h2>
-        <p class="sub">Each card links to a working site, plus its source where it is public.</p>
+        <h2 class="sh" id="proj-h">More projects</h2>
+        <p class="sub">Each card links to the project site or demo, plus its source where it is public. Demos run in your browser with sample data, not against a live server.</p>
       </div>
       <div class="bar">
         <input id="q" type="search" placeholder="Search projects…" aria-label="Search projects" autocomplete="off">
@@ -87,22 +88,42 @@
     <h2 class="sh" id="app-h">How we build</h2>
     <div class="pillars">
       <article class="pillar"><span class="ico" aria-hidden="true">⌂</span><h3>Self-hosted first</h3><p>Your data stays on your hardware. Servers and tools run locally with minimal setup and few moving parts.</p></article>
-      <article class="pillar"><span class="ico" aria-hidden="true">◐</span><h3>Private by default</h3><p>Offline AI, encrypted chat and no required accounts. Privacy is a design constraint, not a setting.</p></article>
+      <article class="pillar"><span class="ico" aria-hidden="true">◐</span><h3>Private by default</h3><p>Data stays on hardware you control by default. Where a feature calls an outside service (an AI provider, map imagery, lyrics), the README says so and it is optional where possible.</p></article>
       <article class="pillar"><span class="ico" aria-hidden="true">◇</span><h3>Lean and dependency-light</h3><p>Small codebases, open APIs and zero-dependency builds where possible. Easy to audit, easy to run.</p></article>
-      <article class="pillar"><span class="ico" aria-hidden="true">▶</span><h3>Try before you install</h3><p>A live, in-browser demo for every project, so you can judge it in seconds.</p></article>
+      <article class="pillar"><span class="ico" aria-hidden="true">▶</span><h3>Try before you install</h3><p>Most projects have an in-browser demo with sample data, so you can judge them in minutes.</p></article>
     </div>
   </section>
 
   <section class="wrap section" id="contact" aria-labelledby="c-h">
-    <div class="contact">
-      <div>
-        <h2 class="sh" id="c-h">Let's build something.</h2>
-        <p class="sub">Questions, feedback or a project in mind? Open an issue on a repo or visit the main site.</p>
+    <div class="hire">
+      <div class="hire-copy">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Booking new projects</p>
+        <h2 class="sh" id="c-h">Got an idea? <span class="grad">Let's build it.</span></h2>
+        <p class="sub">Web apps, desktop tools, AI automation and self-hosted software, built for you. Answer a short guided brief and I'll reply with questions, a rough plan and a ballpark.</p>
+        <ol class="hire-steps" aria-label="How the brief works">
+          <li><b>01</b>What</li><li><b>02</b>Scope</li><li><b>03</b>Details</li><li><b>04</b>You</li>
+        </ol>
+        <div class="hire-cta">
+          <a class="btn primary hire-btn" href="https://248tech.github.io/project-inquiry/">Start a project <span class="arr" aria-hidden="true">→</span></a>
+          <span class="hire-alt">or email <a href="mailto:joe@248tech.com">joe@248tech.com</a></span>
+        </div>
+        <p class="hire-note">Bug or support question? Open an issue on the project's repository.</p>
       </div>
-      <div class="cta">
-        <a class="btn primary" href="https://248tech.com" rel="noopener">248tech.com</a>
-        <a class="btn" href="https://github.com/248Tech" rel="noopener">github.com/248Tech</a>
-      </div>
+      <a class="hire-art" href="https://248tech.github.io/project-inquiry/" tabindex="-1" aria-hidden="true">
+        <div class="mock">
+          <div class="win-bar"><i></i><i></i><i></i><span>project-inquiry</span></div>
+          <div class="mock-body">
+            <div class="mock-prog"><i></i><i></i><i></i><i></i></div>
+            <p class="mock-q">What are we building?</p>
+            <div class="mock-tiles">
+              <span style="--n:0"><em>◧</em>Web app</span><span style="--n:1"><em>◎</em>Website</span><span style="--n:2"><em>▣</em>Desktop</span>
+              <span style="--n:3"><em>✦</em>AI</span><span style="--n:4"><em>⌂</em>Self-hosted</span><span style="--n:5"><em>?</em>Other</span>
+            </div>
+            <div class="mock-chips"><span>Accounts</span><span class="on">Payments</span><span>Admin</span><span class="on">Maps</span></div>
+            <div class="mock-foot"><span class="mock-send">Continue →</span></div>
+          </div>
+        </div>
+      </a>
     </div>
   </section>
 </main>
@@ -116,7 +137,7 @@
 </section>
 <footer class="wrap foot">
   <span>© <span id="yr"></span> 248Tech · Updated <time id="gen"></time> · auto-refreshed daily</span>
-  <span><a href="https://github.com/248Tech" rel="noopener">GitHub</a> · <a href="https://248tech.com" rel="noopener">248tech.com</a></span>
+  <span><a href="https://github.com/248Tech" rel="noopener">GitHub</a></span>
 </footer>
 <script src="app.js"></script>
 <script src="fx.js"></script>
