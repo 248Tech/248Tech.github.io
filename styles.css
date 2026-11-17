@@ -230,7 +230,7 @@ h1,.sh,.feature h3,.card h3{text-wrap:balance}
 .hire-steps b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent);font:700 11px ui-monospace,Consolas,monospace}
 .hire-btn{padding:13px 22px;font-size:15.5px}
 .hire-btn .arr{display:inline-block;transition:transform .2s}
-.hire:hover .hire-btn .arr{transform:translateX(4px)}
+
 .hire:hover .hire-btn::after{transform:translateX(120%);transition:transform .7s}
 
 .mock{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg2);box-shadow:0 40px 80px -30px rgba(0,0,0,.55);transform:perspective(1100px) rotateY(-9deg) rotateX(4deg);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
@@ -259,3 +259,12 @@ h1,.sh,.feature h3,.card h3{text-wrap:balance}
 }
 @media (max-width:520px){.hire-art{display:none}.hire{padding:28px 20px}.hire-steps{display:grid;grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){.hire::before,.nav-cta,.nav-cta .spark,.mock-tiles span,.mock-prog i::after{animation:none!important}.mock-prog i::after{transform:scaleX(1)}}
+.hire-art{display:block;text-decoration:none;color:inherit}
+.hire-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px}
+.hire-alt{color:var(--dim);font-size:14.5px}
+.hire-alt a{color:var(--text);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 60%,transparent);text-underline-offset:3px}
+.hire-alt a:hover{color:var(--accent)}
+.hire-note{margin:18px 0 0;color:var(--dim);font-size:13px}
+.hire:hover .hire-btn::after{transform:none;transition:none}
+.hire-btn:hover .arr{transform:translateX(4px)}
+@media (max-width:520px){.hire-art{display:none}}
