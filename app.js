@@ -1,6 +1,6 @@
 (async () => {
   const $ = id => document.getElementById(id);
-  const grid = $('grid'), q = $('q'), count = $('count'), empty = $('empty'), filters = $('filters');
+  const grid = $('grid'), q = $('q'), count = $('count'), empty = $('empty'), filters = $('filters'), kinds = $('kinds');
   $('yr').textContent = new Date().getFullYear();
 
   let data;
@@ -80,10 +80,29 @@
   const cards = rest.map(p => {
     const c = build(p);
     c.dataset.lang = p.language || '';
+    c.dataset.kind = p.open ? 'open' : 'commercial';
     c.dataset.text = [p.name, p.title || '', p.description, p.language, ...(p.topics || [])].join(' ').toLowerCase();
     grid.append(c);
     return c;
   });
+
+  // license filters: open source (OSI license) vs commercial/proprietary
+  let kind = '';
+  const KINDS = [['', 'All'], ['open', 'Open source'], ['commercial', 'Commercial']];
+  const nKind = k => rest.filter(p => !k || (p.open ? 'open' : 'commercial') === k).length;
+  if (nKind('open') && nKind('commercial')) {
+    for (const [k, label] of KINDS) {
+      const b = el('button', 'fchip', label); b.type = 'button';
+      b.append(el('span', 'n', String(nKind(k))));
+      b.setAttribute('aria-pressed', String(k === kind));
+      b.addEventListener('click', () => {
+        kind = k;
+        for (const x of kinds.children) x.setAttribute('aria-pressed', String(x === b));
+        filter();
+      });
+      kinds.append(b);
+    }
+  } else kinds.hidden = true;
 
   // language filters
   let lang = '';
@@ -105,7 +124,7 @@
     const s = q.value.trim().toLowerCase();
     let n = 0;
     for (const c of cards) {
-      const show = (!s || c.dataset.text.includes(s)) && (!lang || c.dataset.lang === lang);
+      const show = (!s || c.dataset.text.includes(s)) && (!lang || c.dataset.lang === lang) && (!kind || c.dataset.kind === kind);
       c.hidden = !show; if (show) n++;
     }
     count.textContent = n + (n === 1 ? ' project' : ' projects');

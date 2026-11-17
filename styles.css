@@ -69,6 +69,8 @@ input[type=search]:focus{outline:2px solid var(--accent);outline-offset:2px}
 .fchip{cursor:pointer;padding:6px 14px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--dim);font:inherit;font-size:13.5px}
 .fchip:hover{border-color:var(--accent);color:var(--text)}
 .fchip[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#1a1200;font-weight:600}
+.filters.kinds{margin-bottom:10px}
+.fchip .n{margin-left:6px;opacity:.7;font-size:12px}
 
 /* featured */
 .feature{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--panel);margin-top:20px;transition:border-color .2s}
