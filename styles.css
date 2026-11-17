@@ -198,3 +198,64 @@ h1,.sh,.feature h3,.card h3{text-wrap:balance}
   .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 20px}
   .feature .art{min-height:200px}
 }
+
+/* ---- start-a-project: navbar CTA + contact showcase ---- */
+.nav-cta{gap:7px;box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 55%,transparent);animation:ctaGlow 2.8s ease-out infinite}
+.links .nav-cta{color:#1a1200}
+.nav-cta .spark{display:inline-block;animation:spin 6s linear infinite}
+@keyframes ctaGlow{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 50%,transparent)}70%,100%{box-shadow:0 0 0 9px transparent}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:480px){.nav-gh{display:none}}
+
+.hire{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:48px;border-radius:24px;text-decoration:none;color:inherit;isolation:isolate;overflow:hidden;
+  background:
+    radial-gradient(520px 300px at 0% 0%,color-mix(in srgb,var(--accent) 18%,transparent),transparent 70%),
+    radial-gradient(480px 300px at 100% 100%,color-mix(in srgb,var(--accent2) 16%,transparent),transparent 70%),
+    var(--panel);
+  border:1px solid var(--line);transition:border-color .25s,box-shadow .25s,transform .25s}
+/* rotating conic border */
+.hire::before{content:"";position:absolute;inset:-1px;z-index:-1;border-radius:inherit;padding:1px;
+  background:conic-gradient(from var(--ang,0deg),transparent 0 60%,var(--accent) 75%,var(--accent2) 85%,transparent 95%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:ang 6s linear infinite}
+/* dot grid */
+.hire::after{content:"";position:absolute;inset:0;z-index:-2;background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:22px 22px;opacity:.6;mask-image:linear-gradient(90deg,transparent,#000 60%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 60%)}
+@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes ang{to{--ang:360deg}}
+.hire:hover{box-shadow:0 30px 80px -40px var(--accent2);transform:translateY(-2px)}
+.hire .eyebrow{display:inline-flex;align-items:center;gap:9px}
+.hire .sh{font-size:clamp(28px,4.2vw,44px);line-height:1.08}
+.hire .sub{max-width:34em;margin-top:14px;font-size:16.5px}
+.hire-steps{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:24px 0 28px;padding:0}
+.hire-steps li{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border:1px solid var(--line);border-radius:99px;background:color-mix(in srgb,var(--bg) 50%,transparent);font-size:13.5px}
+.hire-steps b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent);font:700 11px ui-monospace,Consolas,monospace}
+.hire-btn{padding:13px 22px;font-size:15.5px}
+.hire-btn .arr{display:inline-block;transition:transform .2s}
+.hire:hover .hire-btn .arr{transform:translateX(4px)}
+.hire:hover .hire-btn::after{transform:translateX(120%);transition:transform .7s}
+
+.mock{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg2);box-shadow:0 40px 80px -30px rgba(0,0,0,.55);transform:perspective(1100px) rotateY(-9deg) rotateX(4deg);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.hire:hover .mock{transform:perspective(1100px) rotateY(-3deg) rotateX(1deg) translateY(-4px)}
+.mock-body{padding:18px}
+.mock-prog{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:16px}
+.mock-prog i{height:3px;border-radius:3px;background:var(--line);overflow:hidden;position:relative}
+.mock-prog i::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:0 50%;animation:prog 8s ease-in-out infinite}
+.mock-prog i:nth-child(2)::after{animation-delay:.5s}.mock-prog i:nth-child(3)::after{animation-delay:1s}.mock-prog i:nth-child(4)::after{animation-delay:1.5s}
+@keyframes prog{0%,8%{transform:scaleX(0)}25%,85%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.mock-q{margin:0 0 12px;font-weight:700;font-size:17px;letter-spacing:-.01em}
+.mock-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mock-tiles span{display:flex;flex-direction:column;gap:6px;padding:11px 10px;border:1px solid var(--line);border-radius:10px;background:var(--panel);font-size:12.5px;font-weight:600;animation:pick 9s infinite;animation-delay:calc(var(--n) * 1.5s)}
+.mock-tiles em{font-style:normal;color:var(--accent);font-size:15px;line-height:1}
+@keyframes pick{0%,16%{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent);transform:translateY(-2px)}20%,100%{border-color:var(--line);box-shadow:none;transform:none}}
+.mock-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.mock-chips span{padding:4px 10px;border:1px solid var(--line);border-radius:99px;font-size:11.5px;color:var(--dim)}
+.mock-chips .on{border-color:var(--accent);color:var(--text);background:color-mix(in srgb,var(--accent) 14%,transparent)}
+.mock-foot{display:flex;justify-content:flex-end;margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
+.mock-send{padding:7px 13px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#1a1200;font-size:12px;font-weight:700}
+
+@media (max-width:860px){
+  .hire{grid-template-columns:1fr;gap:32px;padding:32px 24px}
+  .mock{transform:none}
+  .hire:hover .mock{transform:none}
+}
+@media (max-width:520px){.hire-art{display:none}.hire{padding:28px 20px}.hire-steps{display:grid;grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){.hire::before,.nav-cta,.nav-cta .spark,.mock-tiles span,.mock-prog i::after{animation:none!important}.mock-prog i::after{transform:scaleX(1)}}
