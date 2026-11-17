@@ -30,7 +30,7 @@ async function live(url) {
 // Commercial products with private source. Each is listed through its public site/demo repo
 // (keyed by that repo's name) and gets no "Source" link, since the site repo is not the product's code.
 const COMMERCIAL = {
-  'rentalos-site': {
+  'RentalOS-Showcase': {
     title: 'RentalOS',
     banner: 'rentalos',
     demo: 'demo/',

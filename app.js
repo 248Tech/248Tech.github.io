@@ -72,7 +72,7 @@
   };
 
   // flagships: shown in this order above the grid (same three as the GitHub profile)
-  const FEATURED = ['Mastermind-7DTD-AI-Server-Manager', 'RTSPanda', 'rentalos-site'];
+  const FEATURED = ['Mastermind-7DTD-AI-Server-Manager', 'RTSPanda', 'RentalOS-Showcase'];
   const feats = FEATURED.map(n => projects.find(p => p.name === n)).filter(Boolean);
   if (feats.length) {
     for (const f of feats) $('feature').append(build(f, 'feature'));
