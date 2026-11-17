@@ -14,6 +14,7 @@
     ShowTime: 'ShowTime', RTSPanda: 'RTSPanda', rentalos: 'RentalOS', ImgConvert: 'ImgConvert', QwenPad: 'QwenPad' };
   const prettyName = n => BRAND[n] || n.replace(/[-_]+/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2');
   const pretty = p => p.title || prettyName(p.name);
+  const fmtSize = b => !b ? '' : b >= 1048576 ? (b / 1048576).toFixed(b >= 104857600 ? 0 : 1) + ' MB' : Math.max(1, Math.round(b / 1024)) + ' KB';
   const projects = data.projects;
 
   // stats, derived from real data
@@ -51,6 +52,18 @@
     second.href = p.repo || p.site; second.rel = 'noopener';
     actions.append(live, second);
     body.append(meta, actions);
+    // Latest release download (resolved at build time; absent when there is nothing to download).
+    if (p.download) {
+      const d = p.download;
+      const kind = d.kind === 'source' ? 'source .zip' : '.' + d.file.split('.').pop().toLowerCase();
+      const size = fmtSize(d.size);
+      const info = [d.version, kind, size].filter(Boolean).join(' · ');
+      const dl = el('a', 'btn dl', '↓ Download'); dl.href = d.url; dl.rel = 'noopener';
+      dl.append(el('span', 'dlinfo', info));
+      dl.title = d.file + (size ? ' · ' + size : '');
+      dl.setAttribute('aria-label', 'Download ' + pretty(p) + ' ' + info);
+      body.append(dl);
+    }
     card.append(art, body);
     return card;
   };

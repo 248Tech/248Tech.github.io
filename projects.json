@@ -1,14 +1,14 @@
 {
   "owner": "248Tech",
-  "generated": "2026-11-17T00:40:36.911Z",
+  "generated": "2026-11-17T00:46:10.165Z",
   "loc": {
     "total": 138701,
     "languages": {
-      "Python": 6894,
       "Shell": 2180,
-      "Go": 29746,
+      "Python": 6894,
       "PowerShell": 2672,
       "HTML": 2905,
+      "Go": 29746,
       "JavaScript": 21818,
       "CSS": 3654,
       "TypeScript": 54564,
@@ -18,12 +18,6 @@
       "PHP": 788
     },
     "repos": {
-      "Autoresponder": {
-        "total": 1406,
-        "languages": {
-          "Python": 1406
-        }
-      },
       "7dtd-region-healer": {
         "total": 168,
         "languages": {
@@ -34,6 +28,12 @@
         "total": 63,
         "languages": {
           "Python": 63
+        }
+      },
+      "Autoresponder": {
+        "total": 1406,
+        "languages": {
+          "Python": 1406
         }
       },
       "7dtd-mastermind-donors": {
@@ -49,17 +49,17 @@
           "Python": 2595
         }
       },
-      "carrion": {
-        "total": 2096,
-        "languages": {
-          "Go": 2096
-        }
-      },
       "DarkNotepad": {
         "total": 1036,
         "languages": {
           "PowerShell": 763,
           "HTML": 273
+        }
+      },
+      "carrion": {
+        "total": 2096,
+        "languages": {
+          "Go": 2096
         }
       },
       "fortnite-cosmetics-browser": {
@@ -70,6 +70,17 @@
           "CSS": 510,
           "Shell": 5,
           "Python": 565
+        }
+      },
+      "fortnite-updates-bot": {
+        "total": 1011,
+        "languages": {
+          "Python": 499,
+          "PowerShell": 70,
+          "Shell": 58,
+          "HTML": 165,
+          "JavaScript": 168,
+          "CSS": 51
         }
       },
       "ImgConvert": {
@@ -89,6 +100,16 @@
           "CSS": 204
         }
       },
+      "mastermind-cortex": {
+        "total": 2936,
+        "languages": {
+          "Go": 2404,
+          "HTML": 12,
+          "TypeScript": 457,
+          "CSS": 30,
+          "PowerShell": 33
+        }
+      },
       "LyricVision": {
         "total": 2076,
         "languages": {
@@ -104,27 +125,6 @@
           "JavaScript": 9469
         }
       },
-      "fortnite-updates-bot": {
-        "total": 1011,
-        "languages": {
-          "Python": 499,
-          "PowerShell": 70,
-          "Shell": 58,
-          "HTML": 165,
-          "JavaScript": 168,
-          "CSS": 51
-        }
-      },
-      "mastermind-cortex": {
-        "total": 2936,
-        "languages": {
-          "Go": 2404,
-          "HTML": 12,
-          "TypeScript": 457,
-          "CSS": 30,
-          "PowerShell": 33
-        }
-      },
       "MeasureTent": {
         "total": 350,
         "languages": {
@@ -133,6 +133,14 @@
           "TypeScript": 266,
           "CSS": 7,
           "Prisma": 59
+        }
+      },
+      "QwenPad": {
+        "total": 8935,
+        "languages": {
+          "HTML": 203,
+          "PowerShell": 212,
+          "C#": 8520
         }
       },
       "Mastermind-7DTD-AI-Server-Manager": {
@@ -149,14 +157,6 @@
           "PowerShell": 289,
           "HTML": 220,
           "CSS": 893
-        }
-      },
-      "QwenPad": {
-        "total": 8935,
-        "languages": {
-          "HTML": 203,
-          "PowerShell": 212,
-          "C#": 8520
         }
       },
       "Mastermind-Minecraft-Server-Manager": {
@@ -217,6 +217,7 @@
       "repo": "https://github.com/248Tech/fortnite-updates-bot",
       "open": true,
       "license": "MIT",
+      "download": null,
       "language": "Python",
       "topics": [
         "aiohttp",
@@ -238,6 +239,13 @@
       "repo": "https://github.com/248Tech/Mastermind-7DTD-AI-Server-Manager",
       "open": true,
       "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/Mastermind-7DTD-AI-Server-Manager/archive/refs/tags/v0.0.15.zip",
+        "file": "Mastermind-7DTD-AI-Server-Manager-v0.0.15.zip",
+        "size": null,
+        "version": "v0.0.15",
+        "kind": "source"
+      },
       "language": "TypeScript",
       "topics": [
         "7dtd",
@@ -262,6 +270,13 @@
       "repo": "https://github.com/248Tech/QwenPad",
       "open": true,
       "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/QwenPad/releases/download/v2.0.3/QwenPad-v2.0.3-win-x64.zip",
+        "file": "QwenPad-v2.0.3-win-x64.zip",
+        "size": 1020657462,
+        "version": "v2.0.3",
+        "kind": "binary"
+      },
       "language": "C#",
       "topics": [
         "ai",
@@ -296,6 +311,13 @@
       "repo": "https://github.com/248Tech/ImgConvert",
       "open": true,
       "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/ImgConvert/releases/download/v1.1.1/ImgConvert.exe",
+        "file": "ImgConvert.exe",
+        "size": 20999760,
+        "version": "v1.1.1",
+        "kind": "binary"
+      },
       "language": "Python",
       "topics": [
         "batch-converter",
@@ -328,6 +350,7 @@
       "repo": "https://github.com/248Tech/Mastermind-Minecraft-Server-Manager",
       "open": true,
       "license": "MIT",
+      "download": null,
       "language": "TypeScript",
       "topics": [],
       "stars": 1,
@@ -341,6 +364,13 @@
       "repo": "https://github.com/248Tech/RTSPanda",
       "open": true,
       "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/RTSPanda/archive/refs/tags/v0.1.1.zip",
+        "file": "RTSPanda-v0.1.1.zip",
+        "size": null,
+        "version": "v0.1.1",
+        "kind": "source"
+      },
       "language": "Go",
       "topics": [
         "cctv",
@@ -375,6 +405,13 @@
       "repo": "https://github.com/248Tech/fortnite-cosmetics-browser",
       "open": true,
       "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/fortnite-cosmetics-browser/releases/download/v1.2.0/FortniteCosmeticsBrowser.exe",
+        "file": "FortniteCosmeticsBrowser.exe",
+        "size": 48722072,
+        "version": "v1.2.0",
+        "kind": "binary"
+      },
       "language": "Python",
       "topics": [
         "desktop-app",
@@ -412,6 +449,7 @@
       "repo": null,
       "open": false,
       "license": "NOASSERTION",
+      "download": null,
       "language": "JavaScript",
       "topics": [
         "event-rental",
@@ -429,6 +467,13 @@
       "repo": "https://github.com/248Tech/DarkNotepad",
       "open": true,
       "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/DarkNotepad/releases/download/v1.1.0/DarkNotepad-1.1.0.zip",
+        "file": "DarkNotepad-1.1.0.zip",
+        "size": 14826,
+        "version": "v1.1.0",
+        "kind": "binary"
+      },
       "language": "PowerShell",
       "topics": [
         "dark-mode",
@@ -455,6 +500,13 @@
       "repo": "https://github.com/248Tech/LyricVision",
       "open": true,
       "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/LyricVision/releases/download/v1.0.0/LyricVision.exe",
+        "file": "LyricVision.exe",
+        "size": 98816,
+        "version": "v1.0.0",
+        "kind": "binary"
+      },
       "language": "C#",
       "topics": [
         "beat-detection",
@@ -486,6 +538,13 @@
       "repo": "https://github.com/248Tech/ShowTime",
       "open": true,
       "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/ShowTime/archive/refs/tags/v0.2.0.zip",
+        "file": "ShowTime-v0.2.0.zip",
+        "size": null,
+        "version": "v0.2.0",
+        "kind": "source"
+      },
       "language": "JavaScript",
       "topics": [
         "av1",
@@ -513,6 +572,7 @@
       "repo": "https://github.com/248Tech/GarageIQ",
       "open": false,
       "license": "NOASSERTION",
+      "download": null,
       "language": "JavaScript",
       "topics": [
         "ai-assistant",
@@ -545,6 +605,13 @@
       "repo": "https://github.com/248Tech/litemap",
       "open": true,
       "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/litemap/releases/download/v1.3.1/litemap-1.3.1.zip",
+        "file": "litemap-1.3.1.zip",
+        "size": 9926671,
+        "version": "v1.3.1",
+        "kind": "binary"
+      },
       "language": "JavaScript",
       "topics": [
         "aerial-imagery",
