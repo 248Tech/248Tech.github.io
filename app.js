@@ -16,6 +16,8 @@
   const pretty = p => p.title || prettyName(p.name);
   const fmtSize = b => !b ? '' : b >= 1048576 ? (b / 1048576).toFixed(b >= 104857600 ? 0 : 1) + ' MB' : Math.max(1, Math.round(b / 1024)) + ' KB';
   const projects = data.projects;
+  // Project sites that have no in-browser demo (checked 2026-11-17).
+  const SITE_ONLY = new Set(['QwenPad', 'LyricVision', 'GarageIQ', 'fortnite-cosmetics-browser']);
 
   // stats, derived from real data
   const langs = [...new Set(projects.map(p => p.language).filter(Boolean))];
@@ -38,7 +40,7 @@
     art.prepend(img);
     art.setAttribute('aria-hidden', 'true');
     const body = el('div', 'body');
-    if (tag === 'feature') body.append(el('span', 'tag', 'Featured project'));
+    if (tag === 'feature') body.append(el('span', 'tag', 'Flagship project'));
     body.append(el(tag === 'feature' ? 'h3' : 'h3', null, pretty(p)), el('p', 'desc', p.description || 'No description yet.'));
     const meta = el('div', 'meta');
     if (p.commercial) meta.append(el('span', 'chip', 'Commercial'));
@@ -46,7 +48,8 @@
     for (const t of (p.topics || []).slice(0, 3)) meta.append(el('span', 'chip dim', t));
     if (p.stars) meta.append(el('span', 'chip dim', '★ ' + p.stars));
     const actions = el('div', 'actions');
-    const live = el('a', 'btn primary', 'Open live demo'); live.href = p.demo || p.site; live.rel = 'noopener';
+    // Sites without an in-browser demo get an honest label; demos use sample data, not a live server.
+    const live = el('a', 'btn primary', SITE_ONLY.has(p.name) ? 'Project site' : 'Try demo'); live.href = p.demo || p.site; live.rel = 'noopener';
     // Open-source projects link their repo; commercial products (private source) link their product site.
     const second = el('a', 'btn', p.repo ? 'Source' : 'Product site');
     second.href = p.repo || p.site; second.rel = 'noopener';
@@ -68,15 +71,15 @@
     return card;
   };
 
-  // featured: pinned by name (falls back to the first project)
-  const FEATURED = 'Mastermind-7DTD-AI-Server-Manager';
-  const feat = projects.find(p => p.name === FEATURED) || projects[0];
-  if (projects.length) {
-    $('feature').append(build(feat, 'feature'));
+  // flagships: shown in this order above the grid (same three as the GitHub profile)
+  const FEATURED = ['Mastermind-7DTD-AI-Server-Manager', 'RTSPanda', 'rentalos-site'];
+  const feats = FEATURED.map(n => projects.find(p => p.name === n)).filter(Boolean);
+  if (feats.length) {
+    for (const f of feats) $('feature').append(build(f, 'feature'));
     $('featured').hidden = false;
   }
 
-  const rest = projects.length > 1 ? projects.filter(p => p !== feat) : projects;
+  const rest = projects.filter(p => !feats.includes(p));
   const cards = rest.map(p => {
     const c = build(p);
     c.dataset.lang = p.language || '';

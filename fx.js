@@ -86,7 +86,7 @@
   // ---- headline: rotating phrase ----
   const g = $('h1 .grad');
   if (g && !reduce) {
-    const words = ['where you do.', 'on your terms.', 'privately.', 'offline.', 'in your browser.'];
+    const words = ['where you do.', 'on your hardware.', 'on your terms.'];
     let i = 0;
     g.classList.add('swap');
     setInterval(() => {
