@@ -12,38 +12,44 @@
   // Brand-correct names (the generic splitter would turn LyricVision into "Lyric Vision").
   const BRAND = { DarkNotepad: 'Dark Notepad', LyricVision: 'LyricVision', litemap: 'LiteMap', GarageIQ: 'GarageIQ',
     ShowTime: 'ShowTime', RTSPanda: 'RTSPanda', rentalos: 'RentalOS', ImgConvert: 'ImgConvert', QwenPad: 'QwenPad' };
-  const pretty = n => BRAND[n] || n.replace(/[-_]+/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2');
+  const prettyName = n => BRAND[n] || n.replace(/[-_]+/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2');
+  const pretty = p => p.title || prettyName(p.name);
   const projects = data.projects;
 
   // stats, derived from real data
   const langs = [...new Set(projects.map(p => p.language).filter(Boolean))];
   const stars = projects.reduce((a, p) => a + (p.stars || 0), 0);
-  const stats = [[projects.length, 'Live projects'], [langs.length, 'Languages'], ['100%', 'Open source']];
+  const open = projects.filter(p => p.repo).length;
+  const stats = [[projects.length, 'Live projects'], [langs.length, 'Languages'],
+    [open === projects.length ? '100%' : open + '/' + projects.length, 'Open source']];
   if (stars > 0) stats.push([stars, 'GitHub stars']);
   for (const [v, l] of stats) { const d = el('div'); d.append(el('dt', null, l), el('dd', null, String(v))); $('stats').append(d); }
 
   const build = (p, tag) => {
     const card = el('article', tag === 'feature' ? 'feature' : 'card');
     card.style.setProperty('--h', hue(p.name));
-    const art = el('div', 'art'); art.append(el('span', null, p.name.slice(0, 2).toUpperCase()));
+    const art = el('div', 'art'); art.append(el('span', null, pretty(p).slice(0, 2).toUpperCase()));
     const img = el('img'); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async';
     img.width = 1216; img.height = 512;
-    img.src = 'assets/banners/' + p.name + '.webp';
+    img.src = 'assets/banners/' + (p.banner || p.name) + '.webp';
     img.addEventListener('load', () => art.classList.add('has-img'));
     img.addEventListener('error', () => img.remove());
     art.prepend(img);
     art.setAttribute('aria-hidden', 'true');
     const body = el('div', 'body');
     if (tag === 'feature') body.append(el('span', 'tag', 'Featured project'));
-    body.append(el(tag === 'feature' ? 'h3' : 'h3', null, pretty(p.name)), el('p', 'desc', p.description || 'No description yet.'));
+    body.append(el(tag === 'feature' ? 'h3' : 'h3', null, pretty(p)), el('p', 'desc', p.description || 'No description yet.'));
     const meta = el('div', 'meta');
+    if (p.commercial) meta.append(el('span', 'chip', 'Commercial'));
     if (p.language) meta.append(el('span', 'chip', p.language));
     for (const t of (p.topics || []).slice(0, 3)) meta.append(el('span', 'chip dim', t));
     if (p.stars) meta.append(el('span', 'chip dim', '★ ' + p.stars));
     const actions = el('div', 'actions');
-    const live = el('a', 'btn primary', 'Open live demo'); live.href = p.site; live.rel = 'noopener';
-    const src = el('a', 'btn', 'Source'); src.href = p.repo; src.rel = 'noopener';
-    actions.append(live, src);
+    const live = el('a', 'btn primary', 'Open live demo'); live.href = p.demo || p.site; live.rel = 'noopener';
+    // Open-source projects link their repo; commercial products (private source) link their product site.
+    const second = el('a', 'btn', p.repo ? 'Source' : 'Product site');
+    second.href = p.repo || p.site; second.rel = 'noopener';
+    actions.append(live, second);
     body.append(meta, actions);
     card.append(art, body);
     return card;
@@ -61,7 +67,7 @@
   const cards = rest.map(p => {
     const c = build(p);
     c.dataset.lang = p.language || '';
-    c.dataset.text = [p.name, p.description, p.language, ...(p.topics || [])].join(' ').toLowerCase();
+    c.dataset.text = [p.name, p.title || '', p.description, p.language, ...(p.topics || [])].join(' ').toLowerCase();
     grid.append(c);
     return c;
   });

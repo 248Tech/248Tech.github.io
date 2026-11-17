@@ -27,16 +27,32 @@ async function live(url) {
   } catch { return false; }
 }
 
+// Commercial products with private source. Each is listed through its public site/demo repo
+// (keyed by that repo's name) and gets no "Source" link, since the site repo is not the product's code.
+const COMMERCIAL = {
+  'rentalos-site': {
+    title: 'RentalOS',
+    banner: 'rentalos',
+    demo: 'demo/',
+    language: 'JavaScript',
+    topics: ['event-rental', 'self-hosted', 'inventory-management'],
+    description: 'Self-hosted event rental software: inventory, quotes, availability conflict detection, pull sheets, e-signatures and a public SEO catalog. Commercial product; try the in-browser demo.',
+  },
+};
+
 const repos = (await listRepos()).filter(r => !r.fork && !r.archived && !r.private && r.name.toLowerCase() !== `${OWNER.toLowerCase()}.github.io`);
 const checked = await Promise.all(repos.map(async r => {
   const site = `${HOST}/${r.name}/`;
+  const c = COMMERCIAL[r.name];
   return (await live(site)) ? {
     name: r.name,
-    description: r.description || '',
+    ...(c && { title: c.title, banner: c.banner, commercial: true }),
+    description: c?.description || r.description || '',
     site,
-    repo: r.html_url,
-    language: r.language || '',
-    topics: r.topics || [],
+    demo: c?.demo ? site + c.demo : site,
+    repo: c ? null : r.html_url,
+    language: c?.language || r.language || '',
+    topics: c?.topics || r.topics || [],
     stars: r.stargazers_count,
     pushed: r.pushed_at,
   } : null;
