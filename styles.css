@@ -113,11 +113,18 @@ h2.title,.card h3{margin:0;font-size:20px;line-height:1.25;letter-spacing:-.01em
 .loc-title{margin:0;font-size:clamp(28px,5vw,44px);text-transform:none;letter-spacing:-.02em}
 .loc-num{color:var(--accent);font-variant-numeric:tabular-nums}
 .loc-sub{max-width:70ch;color:var(--dim);font-size:14.5px;margin:8px 0 20px}
-.loc-bar{display:flex;height:14px;border-radius:99px;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
-.loc-bar i{display:block;height:100%;transition:flex-basis .9s cubic-bezier(.2,.7,.2,1)}
-.loc-legend{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;color:var(--dim)}
-.loc-legend b{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
-.loc-legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.loc-bar{display:flex;gap:3px;height:22px;padding:3px;border-radius:99px;background:var(--panel);border:1px solid var(--line)}
+.loc-bar i{display:block;height:100%;min-width:3px;border-radius:99px;transition:flex-basis .9s cubic-bezier(.2,.7,.2,1),opacity .15s,transform .15s}
+.loc-bar.dim i,.loc-legend.dim li{opacity:.35}
+.loc-bar.dim i.hot,.loc-legend.dim li.hot{opacity:1}
+.loc-legend{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+.loc-legend li{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"d n p" "w w w";gap:4px 10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--panel);font-size:13.5px;transition:opacity .15s,border-color .15s}
+.loc-legend li:hover,.loc-legend li.hot{border-color:var(--c)}
+.loc-legend .dot{grid-area:d;width:10px;height:10px;border-radius:50%;background:var(--c);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 22%,transparent)}
+.loc-legend .ln{grid-area:n;color:var(--text);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.loc-legend b{grid-area:p;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+.loc-legend .w{grid-area:w;height:4px;border-radius:4px;background:color-mix(in srgb,var(--c) 15%,transparent);overflow:hidden}
+.loc-legend .w i{display:block;height:100%;border-radius:4px;background:var(--c)}
 .loc-detail{margin-top:18px;color:var(--dim);font-size:14px}
 .loc-detail summary{cursor:pointer;color:var(--text);font-weight:600}
 .loc-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}

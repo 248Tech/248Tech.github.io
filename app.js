@@ -145,15 +145,18 @@
     const repos = Object.entries(loc.repos).sort((a, b) => b[1].total - a[1].total);
     document.getElementById('loc-repos').textContent = repos.length;
     const langs = Object.entries(loc.languages).sort((a, b) => b[1] - a[1]);
-    const top = langs.slice(0, 7), rest = langs.slice(7).reduce((s, [, n]) => s + n, 0);
-    if (rest) top.push(['Other', rest]);
     const bar = document.getElementById('loc-bar'), legend = document.getElementById('loc-legend'), segs = [];
-    top.forEach(([name, n], i) => {
-      const color = name === 'Other' ? '#64748b' : 'hsl(' + ((i * 47 + 20) % 360) + ' 70% 55%)';
-      const seg = el('i'); seg.style.background = color; seg.style.flexBasis = '0%'; seg.title = name + ': ' + fmt(n); bar.append(seg); segs.push([seg, n]);
-      const li = el('li'); const sw = el('i'); sw.style.background = color;
-      li.append(sw, document.createTextNode(name + ' '), el('b', null, (n / loc.total * 100).toFixed(1) + '%')); legend.append(li);
+    const pct = n => { const p = n / loc.total * 100; return p < 0.1 ? '<0.1%' : p.toFixed(p < 10 ? 1 : 0) + '%'; };
+    langs.forEach(([name, n], i) => {
+      const color = 'hsl(' + Math.round((i * 137.5 + 215) % 360) + ' 72% 60%)';
+      const seg = el('i'); seg.style.background = color; seg.style.flexBasis = '0%'; seg.title = name + ': ' + fmt(n) + ' lines'; seg.dataset.i = i; bar.append(seg); segs.push([seg, n]);
+      const li = el('li'); li.style.setProperty('--c', color); li.dataset.i = i;
+      const w = el('span', 'w'); const f = el('i'); f.style.width = Math.max(2, n / langs[0][1] * 100) + '%'; w.append(f);
+      li.append(el('span', 'dot'), el('span', 'ln', name), el('b', null, pct(n)), w); legend.append(li);
     });
+    const hl = i => { bar.classList.toggle('dim', i != null); legend.classList.toggle('dim', i != null);
+      document.querySelectorAll('#loc-bar i, #loc-legend li').forEach(x => x.classList.toggle('hot', i != null && x.dataset.i === String(i))); };
+    for (const x of [bar, legend]) { x.addEventListener('pointerover', ev => { const t = ev.target.closest('[data-i]'); if (t) hl(t.dataset.i); }); x.addEventListener('pointerleave', () => hl(null)); }
     const list = document.getElementById('loc-list'), max = repos[0][1].total;
     for (const [name, r] of repos) {
       const li = el('li'), tr = el('div', 'tr'), fill = el('i'); fill.style.width = (r.total / max * 100) + '%'; tr.append(fill);
