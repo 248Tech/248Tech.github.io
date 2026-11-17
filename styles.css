@@ -166,7 +166,7 @@ h2.title,.card h3{margin:0;font-size:20px;line-height:1.25;letter-spacing:-.01em
 .progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--accent),var(--accent2))}
 .hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .hero-in{z-index:1}
-.grad.swap{display:inline-block;transition:opacity .35s,transform .35s,filter .35s}
+.grad.swap{display:inline-block;padding-bottom:.16em;margin-bottom:-.16em;transition:opacity .35s,transform .35s,filter .35s}
 .grad.swap.out{opacity:0;transform:translateY(.25em);filter:blur(6px)}
 .win{animation:float 6s ease-in-out infinite}
 @keyframes float{50%{transform:rotate(1.5deg) translateY(-10px)}}
