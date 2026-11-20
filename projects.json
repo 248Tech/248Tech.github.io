@@ -1,21 +1,23 @@
 {
   "owner": "248Tech",
-  "generated": "2026-11-17T00:46:10.165Z",
+  "generated": "2026-11-20T05:29:42.597Z",
   "loc": {
-    "total": 138701,
+    "total": 142466,
     "languages": {
-      "Shell": 2180,
-      "Python": 6894,
-      "PowerShell": 2672,
-      "HTML": 2905,
-      "Go": 29746,
-      "JavaScript": 21818,
-      "CSS": 3654,
-      "TypeScript": 54564,
-      "C#": 10329,
+      "Shell": 2052,
+      "Python": 4061,
+      "PowerShell": 2763,
+      "HTML": 4164,
+      "JavaScript": 22102,
+      "CSS": 3633,
+      "C#": 14724,
+      "C": 1131,
+      "TypeScript": 53520,
       "Prisma": 1754,
+      "Go": 28246,
       "SQL": 1397,
-      "PHP": 788
+      "PHP": 788,
+      "Svelte": 2131
     },
     "repos": {
       "7dtd-region-healer": {
@@ -24,29 +26,10 @@
           "Shell": 168
         }
       },
-      "camcord": {
-        "total": 63,
-        "languages": {
-          "Python": 63
-        }
-      },
       "Autoresponder": {
         "total": 1406,
         "languages": {
           "Python": 1406
-        }
-      },
-      "7dtd-mastermind-donors": {
-        "total": 439,
-        "languages": {
-          "Shell": 264,
-          "Python": 175
-        }
-      },
-      "carrion-spine": {
-        "total": 2595,
-        "languages": {
-          "Python": 2595
         }
       },
       "DarkNotepad": {
@@ -54,12 +37,6 @@
         "languages": {
           "PowerShell": 763,
           "HTML": 273
-        }
-      },
-      "carrion": {
-        "total": 2096,
-        "languages": {
-          "Go": 2096
         }
       },
       "fortnite-cosmetics-browser": {
@@ -83,6 +60,22 @@
           "CSS": 51
         }
       },
+      "GhostFeed": {
+        "total": 2720,
+        "languages": {
+          "HTML": 928,
+          "C#": 1734,
+          "PowerShell": 58
+        }
+      },
+      "GhostReel": {
+        "total": 1299,
+        "languages": {
+          "PowerShell": 32,
+          "Shell": 136,
+          "C": 1131
+        }
+      },
       "ImgConvert": {
         "total": 863,
         "languages": {
@@ -90,24 +83,6 @@
           "HTML": 205,
           "JavaScript": 112,
           "CSS": 37
-        }
-      },
-      "GeoHawk": {
-        "total": 1242,
-        "languages": {
-          "HTML": 12,
-          "TypeScript": 1026,
-          "CSS": 204
-        }
-      },
-      "mastermind-cortex": {
-        "total": 2936,
-        "languages": {
-          "Go": 2404,
-          "HTML": 12,
-          "TypeScript": 457,
-          "CSS": 30,
-          "PowerShell": 33
         }
       },
       "LyricVision": {
@@ -118,11 +93,11 @@
         }
       },
       "litemap": {
-        "total": 10565,
+        "total": 10848,
         "languages": {
-          "HTML": 649,
+          "HTML": 652,
           "CSS": 447,
-          "JavaScript": 9469
+          "JavaScript": 9749
         }
       },
       "MeasureTent": {
@@ -136,11 +111,25 @@
         }
       },
       "QwenPad": {
-        "total": 8935,
+        "total": 9696,
         "languages": {
           "HTML": 203,
-          "PowerShell": 212,
-          "C#": 8520
+          "PowerShell": 246,
+          "C#": 9247
+        }
+      },
+      "Mastermind-Minecraft-Server-Manager": {
+        "total": 29119,
+        "languages": {
+          "Go": 6899,
+          "SQL": 678,
+          "Prisma": 609,
+          "TypeScript": 17392,
+          "JavaScript": 934,
+          "Shell": 545,
+          "PowerShell": 949,
+          "HTML": 222,
+          "CSS": 891
         }
       },
       "Mastermind-7DTD-AI-Server-Manager": {
@@ -157,20 +146,6 @@
           "PowerShell": 289,
           "HTML": 220,
           "CSS": 893
-        }
-      },
-      "Mastermind-Minecraft-Server-Manager": {
-        "total": 29119,
-        "languages": {
-          "Go": 6899,
-          "SQL": 678,
-          "Prisma": 609,
-          "TypeScript": 17392,
-          "JavaScript": 934,
-          "Shell": 545,
-          "PowerShell": 949,
-          "HTML": 222,
-          "CSS": 891
         }
       },
       "RTSPanda": {
@@ -195,6 +170,24 @@
           "CSS": 449
         }
       },
+      "Tidy": {
+        "total": 5994,
+        "languages": {
+          "Go": 3000,
+          "HTML": 207,
+          "Svelte": 2131,
+          "TypeScript": 439,
+          "CSS": 213,
+          "JavaScript": 4
+        }
+      },
+      "Tidy-Lite": {
+        "total": 2079,
+        "languages": {
+          "HTML": 145,
+          "C#": 1934
+        }
+      },
       "TentGrid": {
         "total": 9020,
         "languages": {
@@ -210,61 +203,8 @@
   },
   "projects": [
     {
-      "name": "fortnite-updates-bot",
-      "description": "Fortnite Updates Discord bot: slash and prefix commands post Battle Royale, Save the World and Creative news as clean embeds via FortniteAPI.io. Python, discord.py, aiohttp. Try the live demo.",
-      "site": "https://248tech.github.io/fortnite-updates-bot/",
-      "demo": "https://248tech.github.io/fortnite-updates-bot/",
-      "repo": "https://github.com/248Tech/fortnite-updates-bot",
-      "open": true,
-      "license": "MIT",
-      "download": null,
-      "language": "Python",
-      "topics": [
-        "aiohttp",
-        "discord-bot",
-        "discord-py",
-        "fortnite",
-        "fortniteapi",
-        "python",
-        "slash-commands"
-      ],
-      "stars": 3,
-      "pushed": "2026-11-13T22:08:48Z"
-    },
-    {
-      "name": "Mastermind-7DTD-AI-Server-Manager",
-      "description": "AI-assisted, multi-server 7 Days to Die control plane and host agent: safe restarts/updates, live map, player portal, POI search, mods/config editing, saves, triggers, health, logs, and Discord.",
-      "site": "https://248tech.github.io/Mastermind-7DTD-AI-Server-Manager/",
-      "demo": "https://248tech.github.io/Mastermind-7DTD-AI-Server-Manager/",
-      "repo": "https://github.com/248Tech/Mastermind-7DTD-AI-Server-Manager",
-      "open": true,
-      "license": "MIT",
-      "download": {
-        "url": "https://github.com/248Tech/Mastermind-7DTD-AI-Server-Manager/archive/refs/tags/v0.0.15.zip",
-        "file": "Mastermind-7DTD-AI-Server-Manager-v0.0.15.zip",
-        "size": null,
-        "version": "v0.0.15",
-        "kind": "source"
-      },
-      "language": "TypeScript",
-      "topics": [
-        "7dtd",
-        "bullmq",
-        "docker",
-        "game-server",
-        "golang",
-        "nestjs",
-        "nextjs",
-        "prisma",
-        "server-management",
-        "websocket"
-      ],
-      "stars": 3,
-      "pushed": "2026-11-13T21:04:15Z"
-    },
-    {
       "name": "QwenPad",
-      "description": "Beautiful desktop sticky notes + a tiny private Notepad for Windows with a local AI (Qwen3.5 + llama.cpp). 15 note designs, rich text, images, drawing, pin on top, notes that stay open. 100% offline, portable.",
+      "description": "Sticky notes and a small notepad for Windows with a local AI (Qwen3.5 via llama.cpp). 23 note designs, rich text, images, drawing, pin on top. Runs offline after a one-time model download (2.6–5 GB). Portable.",
       "site": "https://248tech.github.io/QwenPad/",
       "demo": "https://248tech.github.io/QwenPad/",
       "repo": "https://github.com/248Tech/QwenPad",
@@ -301,11 +241,64 @@
         "windows-sticky-notes"
       ],
       "stars": 3,
-      "pushed": "2026-10-23T19:17:52Z"
+      "pushed": "2026-11-17T19:40:24Z"
+    },
+    {
+      "name": "Mastermind-7DTD-AI-Server-Manager",
+      "description": "Self-hosted manager for 7 Days to Die servers: Go host agent + NestJS/Next.js control plane. Safe restarts (player warning, Blood Moon wait, backup, empty-server check), mod quarantine, save backups, live map, player portal, Discord alerts. Optional AI-proposed mod-config edits.",
+      "site": "https://248tech.github.io/Mastermind-7DTD-AI-Server-Manager/",
+      "demo": "https://248tech.github.io/Mastermind-7DTD-AI-Server-Manager/",
+      "repo": "https://github.com/248Tech/Mastermind-7DTD-AI-Server-Manager",
+      "open": true,
+      "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/Mastermind-7DTD-AI-Server-Manager/archive/refs/tags/v0.0.15.zip",
+        "file": "Mastermind-7DTD-AI-Server-Manager-v0.0.15.zip",
+        "size": null,
+        "version": "v0.0.15",
+        "kind": "source"
+      },
+      "language": "TypeScript",
+      "topics": [
+        "7dtd",
+        "bullmq",
+        "docker",
+        "game-server",
+        "golang",
+        "nestjs",
+        "nextjs",
+        "prisma",
+        "server-management",
+        "websocket"
+      ],
+      "stars": 3,
+      "pushed": "2026-11-17T16:39:43Z"
+    },
+    {
+      "name": "fortnite-updates-bot",
+      "description": "Discord bot that posts Fortnite Battle Royale, Save the World and Creative news as embeds via FortniteAPI.io, with slash and prefix commands. Python, discord.py, aiohttp. Browser demo included.",
+      "site": "https://248tech.github.io/fortnite-updates-bot/",
+      "demo": "https://248tech.github.io/fortnite-updates-bot/",
+      "repo": "https://github.com/248Tech/fortnite-updates-bot",
+      "open": true,
+      "license": "MIT",
+      "download": null,
+      "language": "Python",
+      "topics": [
+        "aiohttp",
+        "discord-bot",
+        "discord-py",
+        "fortnite",
+        "fortniteapi",
+        "python",
+        "slash-commands"
+      ],
+      "stars": 3,
+      "pushed": "2026-11-13T22:08:48Z"
     },
     {
       "name": "ImgConvert",
-      "description": "ImgConvert: free, open-source, offline image converter for Windows. HEIC to JPG, PNG, WebP, GIF, TIFF in batches. Portable .exe, no ads, no telemetry. Try the online demo.",
+      "description": "Offline batch image converter for Windows. Reads HEIC, WebP, PNG, JPEG, GIF, TIFF and BMP; writes JPEG, PNG, WebP, GIF, HEIC and TIFF. Portable .exe, no network access. Browser demo converts JPEG, PNG and WebP.",
       "site": "https://248tech.github.io/ImgConvert/",
       "demo": "https://248tech.github.io/ImgConvert/",
       "repo": "https://github.com/248Tech/ImgConvert",
@@ -343,22 +336,152 @@
       "pushed": "2026-11-13T22:08:43Z"
     },
     {
-      "name": "Mastermind-Minecraft-Server-Manager",
-      "description": "AI-assisted, multi-server Minecraft control plane and host agent: safe restarts/updates, RCON console, player portal, mods/plugins, configs, saves, triggers, health, logs, and Discord.",
-      "site": "https://248tech.github.io/Mastermind-Minecraft-Server-Manager/",
-      "demo": "https://248tech.github.io/Mastermind-Minecraft-Server-Manager/",
-      "repo": "https://github.com/248Tech/Mastermind-Minecraft-Server-Manager",
+      "name": "litemap",
+      "description": "Measure sites from satellite imagery: distances, areas, to-scale tents and vehicles, will-it-fit and how-many-fit, newest-imagery finder, in-browser AI cut-out. Self-hosted Node.js with no npm dependencies and an OpenAPI 3.1 API. Requires a Mapbox token.",
+      "site": "https://248tech.github.io/litemap/",
+      "demo": "https://248tech.github.io/litemap/",
+      "repo": "https://github.com/248Tech/litemap",
       "open": true,
       "license": "MIT",
-      "download": null,
-      "language": "TypeScript",
-      "topics": [],
+      "download": {
+        "url": "https://github.com/248Tech/litemap/releases/download/v1.3.1/litemap-1.3.1.zip",
+        "file": "litemap-1.3.1.zip",
+        "size": 9926671,
+        "version": "v1.3.1",
+        "kind": "binary"
+      },
+      "language": "JavaScript",
+      "topics": [
+        "aerial-imagery",
+        "area-calculator",
+        "background-removal",
+        "event-planning",
+        "geojson",
+        "geospatial",
+        "gis",
+        "mapbox",
+        "measurement-tool",
+        "nodejs",
+        "onnx",
+        "openapi",
+        "remote-sensing",
+        "rest-api",
+        "satellite-imagery",
+        "self-hosted",
+        "site-planning",
+        "site-survey",
+        "tent-layout",
+        "zero-dependencies"
+      ],
       "stars": 1,
-      "pushed": "2026-11-13T22:08:45Z"
+      "pushed": "2026-11-17T19:40:56Z"
+    },
+    {
+      "name": "Tidy",
+      "description": "Free, beautiful Windows PC cleaner & system monitor anyone can understand: see which apps eat RAM/CPU, find big files with a treemap, quick-clean safely (Recycle Bin + undo), and check your PC from your phone. Go + Svelte, no telemetry.",
+      "site": "https://248tech.github.io/Tidy/",
+      "demo": "https://248tech.github.io/Tidy/",
+      "repo": "https://github.com/248Tech/Tidy",
+      "open": true,
+      "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/Tidy/releases/download/v1.0.0/Tidy.exe",
+        "file": "Tidy.exe",
+        "size": 12939264,
+        "version": "v1.0.0",
+        "kind": "binary"
+      },
+      "language": "Svelte",
+      "topics": [
+        "cleaner",
+        "disk-cleanup",
+        "disk-space-analyzer",
+        "go",
+        "golang",
+        "no-telemetry",
+        "open-source",
+        "pc-cleaner",
+        "portable",
+        "privacy",
+        "process-manager",
+        "remote-monitoring",
+        "storage-analyzer",
+        "svelte",
+        "system-monitor",
+        "task-manager",
+        "treemap",
+        "wails",
+        "windows",
+        "windows-app"
+      ],
+      "stars": 1,
+      "pushed": "2026-11-17T18:52:41Z"
+    },
+    {
+      "name": "Tidy-Lite",
+      "description": "Tidy Lite: a 111 KB native Windows PC cleaner with no web engine. See which apps use your RAM/CPU, end tasks safely, find big files, clean temp files with Recycle Bin undo. Portable, no installer, no telemetry. The tiny sibling of Tidy.",
+      "site": "https://248tech.github.io/Tidy-Lite/",
+      "demo": "https://248tech.github.io/Tidy-Lite/",
+      "repo": "https://github.com/248Tech/Tidy-Lite",
+      "open": true,
+      "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/Tidy-Lite/releases/download/v1.0.0/TidyLite.exe",
+        "file": "TidyLite.exe",
+        "size": 114176,
+        "version": "v1.0.0",
+        "kind": "binary"
+      },
+      "language": "C#",
+      "topics": [
+        "csharp",
+        "disk-cleanup",
+        "disk-space-analyzer",
+        "dotnet-framework",
+        "lightweight",
+        "low-memory",
+        "native",
+        "no-installer",
+        "no-telemetry",
+        "open-source",
+        "pc-cleaner",
+        "portable",
+        "privacy",
+        "process-manager",
+        "system-monitor",
+        "task-manager",
+        "tiny",
+        "windows",
+        "windows-app",
+        "winforms"
+      ],
+      "stars": 1,
+      "pushed": "2026-11-17T18:52:39Z"
+    },
+    {
+      "name": "RentalOS-Showcase",
+      "title": "RentalOS",
+      "banner": "rentalos",
+      "commercial": true,
+      "description": "Self-hosted event rental management: inventory availability that separates confirmed bookings from pending quotes, quoting with a click-to-sign audit trail, pull sheets, a public SEO catalog and an optional AI assistant. Commercial; source private. Browser demo uses sample data.",
+      "site": "https://248tech.github.io/RentalOS-Showcase/",
+      "demo": "https://248tech.github.io/RentalOS-Showcase/demo/",
+      "repo": null,
+      "open": false,
+      "license": "NOASSERTION",
+      "download": null,
+      "language": "JavaScript",
+      "topics": [
+        "event-rental",
+        "self-hosted",
+        "inventory-management"
+      ],
+      "stars": 1,
+      "pushed": "2026-11-17T16:59:46Z"
     },
     {
       "name": "RTSPanda",
-      "description": "RTSPanda: self-hosted RTSP camera platform with browser live view, recording, YOLO/Frigate detection alerts, Discord notifications and Prometheus metrics. Go + React. Try the live demo.",
+      "description": "Self-hosted RTSP camera hub (Go + React): HLS live view via mediamtx with a stream watchdog, per-camera recording, local YOLO detection on sampled frames or Frigate webhooks, Discord alerts, Prometheus metrics. Docker or Raspberry Pi.",
       "site": "https://248tech.github.io/RTSPanda/",
       "demo": "https://248tech.github.io/RTSPanda/",
       "repo": "https://github.com/248Tech/RTSPanda",
@@ -395,11 +518,130 @@
         "yolo"
       ],
       "stars": 1,
-      "pushed": "2026-11-13T22:08:41Z"
+      "pushed": "2026-11-17T16:39:40Z"
+    },
+    {
+      "name": "LyricVision",
+      "description": "Synced Spotify lyrics drawn over games and apps as a click-through Windows overlay, with karaoke, neon and typewriter styles. C#/.NET Framework, no third-party libraries. Needs your own Spotify developer Client ID; lyrics from LRCLIB.",
+      "site": "https://248tech.github.io/LyricVision/",
+      "demo": "https://248tech.github.io/LyricVision/",
+      "repo": "https://github.com/248Tech/LyricVision",
+      "open": true,
+      "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/LyricVision/releases/download/v1.0.0/LyricVision.exe",
+        "file": "LyricVision.exe",
+        "size": 98816,
+        "version": "v1.0.0",
+        "kind": "binary"
+      },
+      "language": "C#",
+      "topics": [
+        "beat-detection",
+        "click-through",
+        "csharp",
+        "dancing-characters",
+        "desktop-app",
+        "dotnet-framework",
+        "game-overlay",
+        "karaoke",
+        "lrclib",
+        "lyrics",
+        "lyrics-overlay",
+        "music-visualizer",
+        "overlay",
+        "spotify",
+        "synced-lyrics",
+        "tray-app",
+        "windows"
+      ],
+      "stars": 1,
+      "pushed": "2026-11-15T22:57:51Z"
+    },
+    {
+      "name": "ShowTime",
+      "description": "Self-hosted watch-party server (Node.js): synced rooms, AV1/VP9 encoding, a media library encrypted at rest, and passphrase-based end-to-end encrypted chat (WebCrypto AES-GCM). Browser demo uses simulated data.",
+      "site": "https://248tech.github.io/ShowTime/",
+      "demo": "https://248tech.github.io/ShowTime/",
+      "repo": "https://github.com/248Tech/ShowTime",
+      "open": true,
+      "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/ShowTime/archive/refs/tags/v0.2.0.zip",
+        "file": "ShowTime-v0.2.0.zip",
+        "size": null,
+        "version": "v0.2.0",
+        "kind": "source"
+      },
+      "language": "JavaScript",
+      "topics": [
+        "av1",
+        "encrypted-chat",
+        "hls",
+        "iptv",
+        "media-server",
+        "nodejs",
+        "privacy",
+        "self-hosted",
+        "sqlite",
+        "vp9",
+        "watch-party",
+        "watch-together",
+        "webrtc"
+      ],
+      "stars": 1,
+      "pushed": "2026-11-14T03:03:14Z"
+    },
+    {
+      "name": "Mastermind-Minecraft-Server-Manager",
+      "description": "Minecraft port of Mastermind 7DTD (shared Go agent + NestJS/Next.js control plane): RCON console, countdown restarts, mod, plugin and config management, saves, player portal and Discord alerts. Early stage.",
+      "site": "https://248tech.github.io/Mastermind-Minecraft-Server-Manager/",
+      "demo": "https://248tech.github.io/Mastermind-Minecraft-Server-Manager/",
+      "repo": "https://github.com/248Tech/Mastermind-Minecraft-Server-Manager",
+      "open": true,
+      "license": "MIT",
+      "download": null,
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 1,
+      "pushed": "2026-11-13T22:08:45Z"
+    },
+    {
+      "name": "GarageIQ",
+      "description": "Vehicle restoration planner: dependency-aware tasks, parts, expenses and an offline-capable PWA with a sync queue. Optional AI assistant (OpenAI API key). Node.js/Express, SQLite. Source-available for review; not licensed for use.",
+      "site": "https://248tech.github.io/GarageIQ/",
+      "demo": "https://248tech.github.io/GarageIQ/",
+      "repo": "https://github.com/248Tech/GarageIQ",
+      "open": false,
+      "license": "NOASSERTION",
+      "download": null,
+      "language": "JavaScript",
+      "topics": [
+        "ai-assistant",
+        "automotive",
+        "car-restoration",
+        "checklist",
+        "expense-tracker",
+        "express",
+        "garage",
+        "inventory-management",
+        "javascript",
+        "nodejs",
+        "offline-first",
+        "openai",
+        "project-management",
+        "pwa",
+        "self-hosted",
+        "sqlite",
+        "vanilla-js",
+        "vehicle-restoration"
+      ],
+      "stars": 1,
+      "pushed": "2026-11-13T20:11:56Z"
     },
     {
       "name": "fortnite-cosmetics-browser",
-      "description": "Every Fortnite skin, emote, pickaxe and glider with in-game showcase videos, today's Item Shop with V-Bucks prices, player stats & leaderboards, map, weapon stats and Sprite tracker. Free, open-source Windows app + web demo. By 248Tech.",
+      "description": "Windows app and web version for browsing Fortnite cosmetics with showcase videos, the daily Item Shop with prices, player stats, the map and weapon stats. Python.",
       "site": "https://248tech.github.io/fortnite-cosmetics-browser/",
       "demo": "https://248tech.github.io/fortnite-cosmetics-browser/",
       "repo": "https://github.com/248Tech/fortnite-cosmetics-browser",
@@ -439,29 +681,48 @@
       "pushed": "2026-11-13T20:06:15Z"
     },
     {
-      "name": "RentalOS-Showcase",
-      "title": "RentalOS",
-      "banner": "rentalos",
-      "commercial": true,
-      "description": "Self-hosted event rental management: inventory availability that separates confirmed bookings from pending quotes, quoting with a click-to-sign audit trail, pull sheets, a public SEO catalog and an optional AI assistant. Commercial; source private. Browser demo uses sample data.",
-      "site": "https://248tech.github.io/RentalOS-Showcase/",
-      "demo": "https://248tech.github.io/RentalOS-Showcase/demo/",
-      "repo": null,
-      "open": false,
-      "license": "NOASSERTION",
-      "download": null,
-      "language": "JavaScript",
+      "name": "GhostFeed",
+      "description": "Watch X (Twitter) videos as a floating, always-on-top, click-through overlay on Windows. Global hotkeys, multi-tag search, For You/Following feeds, up to 4K fullscreen. C# + WebView2, ~1.4 MB.",
+      "site": "https://248tech.github.io/GhostFeed/",
+      "demo": "https://248tech.github.io/GhostFeed/",
+      "repo": "https://github.com/248Tech/GhostFeed",
+      "open": true,
+      "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/GhostFeed/releases/download/v0.2.0/GhostFeed-win-x64.exe",
+        "file": "GhostFeed-win-x64.exe",
+        "size": 66494763,
+        "version": "v0.2.0",
+        "kind": "binary"
+      },
+      "language": "C#",
       "topics": [
-        "event-rental",
-        "self-hosted",
-        "inventory-management"
+        "always-on-top",
+        "click-through",
+        "csharp",
+        "desktop-app",
+        "dotnet",
+        "floating-window",
+        "global-hotkeys",
+        "overlay",
+        "picture-in-picture",
+        "reels",
+        "short-video",
+        "twitter",
+        "twitter-video",
+        "video-player",
+        "webview2",
+        "windows",
+        "winforms",
+        "x",
+        "x-video"
       ],
       "stars": 0,
-      "pushed": "2026-11-16T23:54:21Z"
+      "pushed": "2026-11-20T05:29:19Z"
     },
     {
       "name": "DarkNotepad",
-      "description": "Free, open-source dark mode Notepad alternative for Windows 10/11. Light text on dark gray. PowerShell + WinForms. Live demo included.",
+      "description": "Dark-mode Notepad alternative for Windows 10/11, written in PowerShell + WinForms. Browser demo included.",
       "site": "https://248tech.github.io/DarkNotepad/",
       "demo": "https://248tech.github.io/DarkNotepad/",
       "repo": "https://github.com/248Tech/DarkNotepad",
@@ -491,152 +752,6 @@
       ],
       "stars": 0,
       "pushed": "2026-11-16T16:54:18Z"
-    },
-    {
-      "name": "LyricVision",
-      "description": "LyricVision: synced Spotify lyrics drawn over your games and apps. Click-through Windows overlay with karaoke, neon and typewriter styles. Optional beat-synced dancing characters on a branch. C#, no dependencies.",
-      "site": "https://248tech.github.io/LyricVision/",
-      "demo": "https://248tech.github.io/LyricVision/",
-      "repo": "https://github.com/248Tech/LyricVision",
-      "open": true,
-      "license": "MIT",
-      "download": {
-        "url": "https://github.com/248Tech/LyricVision/releases/download/v1.0.0/LyricVision.exe",
-        "file": "LyricVision.exe",
-        "size": 98816,
-        "version": "v1.0.0",
-        "kind": "binary"
-      },
-      "language": "C#",
-      "topics": [
-        "beat-detection",
-        "click-through",
-        "csharp",
-        "dancing-characters",
-        "desktop-app",
-        "dotnet-framework",
-        "game-overlay",
-        "karaoke",
-        "lrclib",
-        "lyrics",
-        "lyrics-overlay",
-        "music-visualizer",
-        "overlay",
-        "spotify",
-        "synced-lyrics",
-        "tray-app",
-        "windows"
-      ],
-      "stars": 0,
-      "pushed": "2026-11-15T22:57:51Z"
-    },
-    {
-      "name": "ShowTime",
-      "description": "Self-hosted watch-party server: synced rooms, encrypted library, AV1/VP9 smart encoding, friends-only privacy and end-to-end encrypted chat. Live demo included.",
-      "site": "https://248tech.github.io/ShowTime/",
-      "demo": "https://248tech.github.io/ShowTime/",
-      "repo": "https://github.com/248Tech/ShowTime",
-      "open": true,
-      "license": "MIT",
-      "download": {
-        "url": "https://github.com/248Tech/ShowTime/archive/refs/tags/v0.2.0.zip",
-        "file": "ShowTime-v0.2.0.zip",
-        "size": null,
-        "version": "v0.2.0",
-        "kind": "source"
-      },
-      "language": "JavaScript",
-      "topics": [
-        "av1",
-        "encrypted-chat",
-        "hls",
-        "iptv",
-        "media-server",
-        "nodejs",
-        "privacy",
-        "self-hosted",
-        "sqlite",
-        "vp9",
-        "watch-party",
-        "watch-together",
-        "webrtc"
-      ],
-      "stars": 0,
-      "pushed": "2026-11-14T03:03:14Z"
-    },
-    {
-      "name": "GarageIQ",
-      "description": "AI-assisted restoration manager for vehicle builds: dependency-aware checklists, parts, expenses, garage projects, an interactive garage and an offline-first PWA. Node.js · SQLite · vanilla JS.",
-      "site": "https://248tech.github.io/GarageIQ/",
-      "demo": "https://248tech.github.io/GarageIQ/",
-      "repo": "https://github.com/248Tech/GarageIQ",
-      "open": false,
-      "license": "NOASSERTION",
-      "download": null,
-      "language": "JavaScript",
-      "topics": [
-        "ai-assistant",
-        "automotive",
-        "car-restoration",
-        "checklist",
-        "expense-tracker",
-        "express",
-        "garage",
-        "inventory-management",
-        "javascript",
-        "nodejs",
-        "offline-first",
-        "openai",
-        "project-management",
-        "pwa",
-        "self-hosted",
-        "sqlite",
-        "vanilla-js",
-        "vehicle-restoration"
-      ],
-      "stars": 0,
-      "pushed": "2026-11-13T20:11:56Z"
-    },
-    {
-      "name": "litemap",
-      "description": "Measure sites from satellite imagery without a site visit: distances, areas, to-scale tents & vehicles, will-it-fit / how-many-fit, newest-imagery finder, AI object cut-out. Self-hosted, zero dependencies, OpenAPI 3.1 REST API.",
-      "site": "https://248tech.github.io/litemap/",
-      "demo": "https://248tech.github.io/litemap/",
-      "repo": "https://github.com/248Tech/litemap",
-      "open": true,
-      "license": "MIT",
-      "download": {
-        "url": "https://github.com/248Tech/litemap/releases/download/v1.3.1/litemap-1.3.1.zip",
-        "file": "litemap-1.3.1.zip",
-        "size": 9926671,
-        "version": "v1.3.1",
-        "kind": "binary"
-      },
-      "language": "JavaScript",
-      "topics": [
-        "aerial-imagery",
-        "area-calculator",
-        "background-removal",
-        "event-planning",
-        "geojson",
-        "geospatial",
-        "gis",
-        "mapbox",
-        "measurement-tool",
-        "nodejs",
-        "onnx",
-        "openapi",
-        "remote-sensing",
-        "rest-api",
-        "satellite-imagery",
-        "self-hosted",
-        "site-planning",
-        "site-survey",
-        "tent-layout",
-        "zero-dependencies"
-      ],
-      "stars": 0,
-      "pushed": "2026-11-12T20:52:56Z"
     }
   ]
 }
