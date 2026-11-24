@@ -1,17 +1,17 @@
 {
   "owner": "248Tech",
-  "generated": "2026-11-20T05:29:42.597Z",
+  "generated": "2026-11-24T20:31:24.201Z",
   "loc": {
     "total": 142466,
     "languages": {
-      "Shell": 2052,
       "Python": 4061,
+      "Shell": 2052,
       "PowerShell": 2763,
       "HTML": 4164,
       "JavaScript": 22102,
       "CSS": 3633,
-      "C#": 14724,
       "C": 1131,
+      "C#": 14724,
       "TypeScript": 53520,
       "Prisma": 1754,
       "Go": 28246,
@@ -20,16 +20,16 @@
       "Svelte": 2131
     },
     "repos": {
-      "7dtd-region-healer": {
-        "total": 168,
-        "languages": {
-          "Shell": 168
-        }
-      },
       "Autoresponder": {
         "total": 1406,
         "languages": {
           "Python": 1406
+        }
+      },
+      "7dtd-region-healer": {
+        "total": 168,
+        "languages": {
+          "Shell": 168
         }
       },
       "DarkNotepad": {
@@ -49,6 +49,14 @@
           "Python": 565
         }
       },
+      "GhostReel": {
+        "total": 1299,
+        "languages": {
+          "PowerShell": 32,
+          "Shell": 136,
+          "C": 1131
+        }
+      },
       "fortnite-updates-bot": {
         "total": 1011,
         "languages": {
@@ -66,14 +74,6 @@
           "HTML": 928,
           "C#": 1734,
           "PowerShell": 58
-        }
-      },
-      "GhostReel": {
-        "total": 1299,
-        "languages": {
-          "PowerShell": 32,
-          "Shell": 136,
-          "C": 1131
         }
       },
       "ImgConvert": {
@@ -118,20 +118,6 @@
           "C#": 9247
         }
       },
-      "Mastermind-Minecraft-Server-Manager": {
-        "total": 29119,
-        "languages": {
-          "Go": 6899,
-          "SQL": 678,
-          "Prisma": 609,
-          "TypeScript": 17392,
-          "JavaScript": 934,
-          "Shell": 545,
-          "PowerShell": 949,
-          "HTML": 222,
-          "CSS": 891
-        }
-      },
       "Mastermind-7DTD-AI-Server-Manager": {
         "total": 37569,
         "languages": {
@@ -148,6 +134,39 @@
           "CSS": 893
         }
       },
+      "Mastermind-Minecraft-Server-Manager": {
+        "total": 29119,
+        "languages": {
+          "Go": 6899,
+          "SQL": 678,
+          "Prisma": 609,
+          "TypeScript": 17392,
+          "JavaScript": 934,
+          "Shell": 545,
+          "PowerShell": 949,
+          "HTML": 222,
+          "CSS": 891
+        }
+      },
+      "TentGrid": {
+        "total": 9020,
+        "languages": {
+          "Prisma": 442,
+          "TypeScript": 8273,
+          "JavaScript": 6,
+          "CSS": 55,
+          "PowerShell": 145,
+          "Python": 99
+        }
+      },
+      "ShowTime": {
+        "total": 7504,
+        "languages": {
+          "JavaScript": 6764,
+          "HTML": 291,
+          "CSS": 449
+        }
+      },
       "RTSPanda": {
         "total": 15720,
         "languages": {
@@ -160,14 +179,6 @@
           "TypeScript": 5010,
           "CSS": 80,
           "Shell": 517
-        }
-      },
-      "ShowTime": {
-        "total": 7504,
-        "languages": {
-          "JavaScript": 6764,
-          "HTML": 291,
-          "CSS": 449
         }
       },
       "Tidy": {
@@ -186,17 +197,6 @@
         "languages": {
           "HTML": 145,
           "C#": 1934
-        }
-      },
-      "TentGrid": {
-        "total": 9020,
-        "languages": {
-          "Prisma": 442,
-          "TypeScript": 8273,
-          "JavaScript": 6,
-          "CSS": 55,
-          "PowerShell": 145,
-          "Python": 99
         }
       }
     }
@@ -334,6 +334,81 @@
       ],
       "stars": 2,
       "pushed": "2026-11-13T22:08:43Z"
+    },
+    {
+      "name": "fortnite-cosmetics-browser",
+      "description": "Windows app and web version for browsing Fortnite cosmetics with showcase videos, the daily Item Shop with prices, player stats, the map and weapon stats. Python.",
+      "site": "https://248tech.github.io/fortnite-cosmetics-browser/",
+      "demo": "https://248tech.github.io/fortnite-cosmetics-browser/",
+      "repo": "https://github.com/248Tech/fortnite-cosmetics-browser",
+      "open": true,
+      "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/fortnite-cosmetics-browser/releases/download/v1.2.0/FortniteCosmeticsBrowser.exe",
+        "file": "FortniteCosmeticsBrowser.exe",
+        "size": 48722072,
+        "version": "v1.2.0",
+        "kind": "binary"
+      },
+      "language": "Python",
+      "topics": [
+        "desktop-app",
+        "fortnite",
+        "fortnite-api",
+        "fortnite-cosmetics",
+        "fortnite-emotes",
+        "fortnite-item-shop",
+        "fortnite-locker",
+        "fortnite-map",
+        "fortnite-skins",
+        "fortnite-stats",
+        "fortnite-tracker",
+        "gaming",
+        "github-pages",
+        "leaderboard",
+        "open-source",
+        "pillow",
+        "python",
+        "tkinter",
+        "web-app",
+        "windows"
+      ],
+      "stars": 1,
+      "pushed": "2026-11-24T20:12:00Z"
+    },
+    {
+      "name": "ShowTime",
+      "description": "Self-hosted watch-party server (Node.js): synced rooms, AV1/VP9 encoding, a media library encrypted at rest, and passphrase-based end-to-end encrypted chat (WebCrypto AES-GCM). Browser demo uses simulated data.",
+      "site": "https://248tech.github.io/ShowTime/",
+      "demo": "https://248tech.github.io/ShowTime/",
+      "repo": "https://github.com/248Tech/ShowTime",
+      "open": true,
+      "license": "MIT",
+      "download": {
+        "url": "https://github.com/248Tech/ShowTime/archive/refs/tags/v0.2.0.zip",
+        "file": "ShowTime-v0.2.0.zip",
+        "size": null,
+        "version": "v0.2.0",
+        "kind": "source"
+      },
+      "language": "JavaScript",
+      "topics": [
+        "av1",
+        "encrypted-chat",
+        "hls",
+        "iptv",
+        "media-server",
+        "nodejs",
+        "privacy",
+        "self-hosted",
+        "sqlite",
+        "vp9",
+        "watch-party",
+        "watch-together",
+        "webrtc"
+      ],
+      "stars": 1,
+      "pushed": "2026-11-20T11:09:31Z"
     },
     {
       "name": "litemap",
@@ -559,40 +634,6 @@
       "pushed": "2026-11-15T22:57:51Z"
     },
     {
-      "name": "ShowTime",
-      "description": "Self-hosted watch-party server (Node.js): synced rooms, AV1/VP9 encoding, a media library encrypted at rest, and passphrase-based end-to-end encrypted chat (WebCrypto AES-GCM). Browser demo uses simulated data.",
-      "site": "https://248tech.github.io/ShowTime/",
-      "demo": "https://248tech.github.io/ShowTime/",
-      "repo": "https://github.com/248Tech/ShowTime",
-      "open": true,
-      "license": "MIT",
-      "download": {
-        "url": "https://github.com/248Tech/ShowTime/archive/refs/tags/v0.2.0.zip",
-        "file": "ShowTime-v0.2.0.zip",
-        "size": null,
-        "version": "v0.2.0",
-        "kind": "source"
-      },
-      "language": "JavaScript",
-      "topics": [
-        "av1",
-        "encrypted-chat",
-        "hls",
-        "iptv",
-        "media-server",
-        "nodejs",
-        "privacy",
-        "self-hosted",
-        "sqlite",
-        "vp9",
-        "watch-party",
-        "watch-together",
-        "webrtc"
-      ],
-      "stars": 1,
-      "pushed": "2026-11-14T03:03:14Z"
-    },
-    {
       "name": "Mastermind-Minecraft-Server-Manager",
       "description": "Minecraft port of Mastermind 7DTD (shared Go agent + NestJS/Next.js control plane): RCON console, countdown restarts, mod, plugin and config management, saves, player portal and Discord alerts. Early stage.",
       "site": "https://248tech.github.io/Mastermind-Minecraft-Server-Manager/",
@@ -640,45 +681,25 @@
       "pushed": "2026-11-13T20:11:56Z"
     },
     {
-      "name": "fortnite-cosmetics-browser",
-      "description": "Windows app and web version for browsing Fortnite cosmetics with showcase videos, the daily Item Shop with prices, player stats, the map and weapon stats. Python.",
-      "site": "https://248tech.github.io/fortnite-cosmetics-browser/",
-      "demo": "https://248tech.github.io/fortnite-cosmetics-browser/",
-      "repo": "https://github.com/248Tech/fortnite-cosmetics-browser",
-      "open": true,
-      "license": "MIT",
-      "download": {
-        "url": "https://github.com/248Tech/fortnite-cosmetics-browser/releases/download/v1.2.0/FortniteCosmeticsBrowser.exe",
-        "file": "FortniteCosmeticsBrowser.exe",
-        "size": 48722072,
-        "version": "v1.2.0",
-        "kind": "binary"
-      },
-      "language": "Python",
+      "name": "GTAIndex-Demo",
+      "title": "GTAIndex",
+      "banner": "GTAIndex",
+      "fan": true,
+      "description": "Fan Project: an unofficial, offline GTA VI field guide in a single .exe. Interactive Leonida map with directions, a database of characters, vehicles and weapons, collectibles checklists, a progress tracker and live LAN crew sharing. Not affiliated with Rockstar Games. Web demo saves progress in your browser.",
+      "site": "https://248tech.github.io/GTAIndex-Demo/",
+      "demo": "https://248tech.github.io/GTAIndex-Demo/",
+      "repo": null,
+      "open": false,
+      "license": null,
+      "download": null,
+      "language": "Go",
       "topics": [
-        "desktop-app",
-        "fortnite",
-        "fortnite-api",
-        "fortnite-cosmetics",
-        "fortnite-emotes",
-        "fortnite-item-shop",
-        "fortnite-locker",
-        "fortnite-map",
-        "fortnite-skins",
-        "fortnite-stats",
-        "fortnite-tracker",
-        "gaming",
-        "github-pages",
-        "leaderboard",
-        "open-source",
-        "pillow",
-        "python",
-        "tkinter",
-        "web-app",
-        "windows"
+        "gta-6",
+        "interactive-map",
+        "offline"
       ],
-      "stars": 1,
-      "pushed": "2026-11-13T20:06:15Z"
+      "stars": 0,
+      "pushed": "2026-11-24T20:30:13Z"
     },
     {
       "name": "GhostFeed",

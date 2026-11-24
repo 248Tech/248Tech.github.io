@@ -44,6 +44,7 @@
     body.append(el(tag === 'feature' ? 'h3' : 'h3', null, pretty(p)), el('p', 'desc', p.description || 'No description yet.'));
     const meta = el('div', 'meta');
     if (p.commercial) meta.append(el('span', 'chip', 'Commercial'));
+    if (p.fan) meta.append(el('span', 'chip', 'Fan Project'));
     if (p.language) meta.append(el('span', 'chip', p.language));
     for (const t of (p.topics || []).slice(0, 3)) meta.append(el('span', 'chip dim', t));
     if (p.stars) meta.append(el('span', 'chip dim', '★ ' + p.stars));
@@ -51,9 +52,13 @@
     // Sites without an in-browser demo get an honest label; demos use sample data, not a live server.
     const live = el('a', 'btn primary', SITE_ONLY.has(p.name) ? 'Project site' : 'Try demo'); live.href = p.demo || p.site; live.rel = 'noopener';
     // Open-source projects link their repo; commercial products (private source) link their product site.
-    const second = el('a', 'btn', p.repo ? 'Source' : 'Product site');
-    second.href = p.repo || p.site; second.rel = 'noopener';
-    actions.append(live, second);
+    // Fan projects (private source) have only the demo, so they get no second button.
+    actions.append(live);
+    if (!p.fan) {
+      const second = el('a', 'btn', p.repo ? 'Source' : 'Product site');
+      second.href = p.repo || p.site; second.rel = 'noopener';
+      actions.append(second);
+    }
     body.append(meta, actions);
     // Latest release download (resolved at build time; absent when there is nothing to download).
     if (p.download) {
@@ -83,7 +88,7 @@
   const cards = rest.map(p => {
     const c = build(p);
     c.dataset.lang = p.language || '';
-    c.dataset.kind = p.open ? 'open' : 'commercial';
+    c.dataset.kind = p.open ? 'open' : p.fan ? 'fan' : 'commercial';
     c.dataset.text = [p.name, p.title || '', p.description, p.language, ...(p.topics || [])].join(' ').toLowerCase();
     grid.append(c);
     return c;
@@ -92,7 +97,7 @@
   // license filters: open source (OSI license) vs commercial/proprietary
   let kind = '';
   const KINDS = [['', 'All'], ['open', 'Open source'], ['commercial', 'Commercial']];
-  const nKind = k => rest.filter(p => !k || (p.open ? 'open' : 'commercial') === k).length;
+  const nKind = k => rest.filter(p => !k || (p.open ? 'open' : p.fan ? 'fan' : 'commercial') === k).length;
   if (nKind('open') && nKind('commercial')) {
     for (const [k, label] of KINDS) {
       const b = el('button', 'fchip', label); b.type = 'button';

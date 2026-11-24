@@ -40,6 +40,18 @@ const COMMERCIAL = {
   },
 };
 
+// Unofficial fan projects with private source, listed through their public demo repo. They get a
+// "Fan Project" tag and no "Source" link, and are never counted as open source or commercial.
+const FAN = {
+  'GTAIndex-Demo': {
+    title: 'GTAIndex',
+    banner: 'GTAIndex',
+    language: 'Go',
+    topics: ['gta-6', 'interactive-map', 'offline'],
+    description: 'Fan Project: an unofficial, offline GTA VI field guide in a single .exe. Interactive Leonida map with directions, a database of characters, vehicles and weapons, collectibles checklists, a progress tracker and live LAN crew sharing. Not affiliated with Rockstar Games. Web demo saves progress in your browser.',
+  },
+};
+
 // Open source = GitHub detected a real SPDX license (e.g. MIT). Repos with no license file or a
 // custom/proprietary one (spdx_id NOASSERTION) are public but not open source.
 const isOpenSource = r => !!r.license?.spdx_id && !['NOASSERTION', 'NONE'].includes(r.license.spdx_id);
@@ -67,12 +79,14 @@ const EXCLUDE = new Set(['project-inquiry']);
 const repos = (await listRepos()).filter(r => !r.fork && !r.archived && !r.private && !EXCLUDE.has(r.name) && r.name.toLowerCase() !== `${OWNER.toLowerCase()}.github.io`);
 const checked = await Promise.all(repos.map(async r => {
   const site = `${HOST}/${r.name}/`;
-  const c = COMMERCIAL[r.name];
+  const f = FAN[r.name];
+  const c = COMMERCIAL[r.name] || f;
   if (!(await live(site))) return null;
   const open = !c && isOpenSource(r);
   return {
     name: r.name,
-    ...(c && { title: c.title, banner: c.banner, commercial: true }),
+    ...(c && { title: c.title, banner: c.banner }),
+    ...(c && (f ? { fan: true } : { commercial: true })),
     description: c?.description || r.description || '',
     site,
     demo: c?.demo ? site + c.demo : site,
